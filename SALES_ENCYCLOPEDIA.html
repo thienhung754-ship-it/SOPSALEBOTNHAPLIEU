@@ -711,15 +711,17 @@ body {
    ===================== */
 @media (max-width: 768px) {
   .sidebar { display: none; }
-  .main { margin-left: 0; padding-top: var(--top-bar-h); padding-bottom: var(--nav-bar-h); }
+  .main { margin-left: 0; padding-top: var(--top-bar-h); }
   .mobile-topbar { display: flex; }
   .mobile-nav { display: flex; }
-  .fab { bottom: calc(var(--nav-bar-h) + 12px); }
+  .fab { display: none; } /* ẩn FAB trên mobile, không cần in */
 
   .page-header { padding: 24px 20px 20px; }
   .page-header .page-icon { font-size: 28px; margin-bottom: 6px; }
   .page-header h2 { font-size: 22px; }
-  .page-body { padding: 16px 16px 20px; }
+  /* padding-bottom đủ để content không bị bottom nav che */
+  .page-body { padding: 16px 16px calc(var(--nav-bar-h) + 32px); }
+  .cover-page { padding-bottom: calc(var(--nav-bar-h) + 32px); }
 
   .price-grid { grid-template-columns: 1fr; }
   .cover-toc { grid-template-columns: repeat(2, 1fr); }
@@ -729,7 +731,72 @@ body {
   .form-box { font-size: 11px; padding: 14px; }
   .role-table { font-size: 12px; }
   .role-table th, .role-table td { padding: 9px 10px; }
+
+  /* Đảm bảo page scroll được toàn bộ */
+  .page { min-height: calc(100vh - var(--top-bar-h)); }
 }
+
+/* =====================
+   STEP NAV STRIP
+   ===================== */
+.step-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 16px;
+  background: var(--bg-card);
+  border-bottom: 0.5px solid var(--sep);
+  position: sticky;
+  top: var(--top-bar-h);
+  z-index: 10;
+}
+.step-nav-pills {
+  display: flex;
+  gap: 5px;
+  flex: 1;
+  justify-content: center;
+}
+.step-pill {
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 1.5px solid var(--sep2);
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--label3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: 'Nunito', sans-serif;
+}
+.step-pill.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+.step-nav-btn {
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 1px solid var(--sep2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.15s;
+  font-family: 'Nunito', sans-serif;
+}
+.step-nav-btn:active { background: var(--accent); border-color: var(--accent); }
+.step-nav-btn svg { width: 14px; height: 14px; stroke: var(--label2); stroke-width: 2.2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.step-nav-btn:active svg { stroke: white; }
+.step-nav-btn.disabled { opacity: 0.3; pointer-events: none; }
+
+/* Chỉ hiện trên mobile */
+@media (min-width: 769px) { .step-nav { display: none; } }
 
 @media print {
   .sidebar, .fab, .mobile-topbar, .mobile-nav { display: none !important; }
@@ -2448,8 +2515,61 @@ _render('home');
 // Render all Lucide icons
 document.addEventListener('DOMContentLoaded', () => { lucide.createIcons(); });
 lucide.createIcons();
+
+// ── STEP NAV: auto-inject vào đầu mỗi step page-body
+const STEPS = [
+  { id: 'step1', label: '1' },
+  { id: 'step2', label: '2' },
+  { id: 'step3', label: '3' },
+  { id: 'step4', label: '4' },
+  { id: 'step5', label: '5' },
+  { id: 'step6', label: '6' },
+];
+
+function buildStepNav(currentIdx) {
+  const prev = currentIdx > 0 ? STEPS[currentIdx - 1].id : null;
+  const next = currentIdx < STEPS.length - 1 ? STEPS[currentIdx + 1].id : null;
+
+  const pills = STEPS.map((s, i) => `
+    <div class="step-pill ${i === currentIdx ? 'active' : ''}" onclick="showPage('${s.id}');setStepNav('${s.id}')">${s.label}</div>
+  `).join('');
+
+  const prevBtn = `<button class="step-nav-btn ${prev ? '' : 'disabled'}" onclick="${prev ? `showPage('${prev}');setStepNav('${prev}')` : ''}">
+    <svg viewBox="0 0 14 14"><path d="M9 2L4 7l5 5"/></svg>
+  </button>`;
+
+  const nextBtn = `<button class="step-nav-btn ${next ? '' : 'disabled'}" onclick="${next ? `showPage('${next}');setStepNav('${next}')` : ''}">
+    <svg viewBox="0 0 14 14"><path d="M5 2l5 5-5 5"/></svg>
+  </button>`;
+
+  return `<div class="step-nav" id="step-nav-${STEPS[currentIdx].id}">${prevBtn}<div class="step-nav-pills">${pills}</div>${nextBtn}</div>`;
+}
+
+function setStepNav(pageId) {
+  const idx = STEPS.findIndex(s => s.id === pageId);
+  if (idx === -1) return;
+  // Re-render all step navs to reflect active
+  STEPS.forEach((s, i) => {
+    const nav = document.getElementById('step-nav-' + s.id);
+    if (nav) nav.outerHTML = buildStepNav(i);
+  });
+}
+
+// Inject step nav khi DOM ready
+document.addEventListener('DOMContentLoaded', () => {
+  STEPS.forEach((s, idx) => {
+    const page = document.getElementById('page-' + s.id);
+    if (!page) return;
+    const body = page.querySelector('.page-body');
+    if (!body) return;
+    const navEl = document.createElement('div');
+    navEl.innerHTML = buildStepNav(idx);
+    page.insertBefore(navEl.firstElementChild, body);
+  });
+});
 </script>
 
 </body>
 </html>
+
 
