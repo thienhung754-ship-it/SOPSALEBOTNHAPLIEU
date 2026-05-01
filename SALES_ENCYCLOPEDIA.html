@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
@@ -840,8 +840,8 @@ body {
 <!-- ===== SIDEBAR (DESKTOP) ===== -->
 <nav class="sidebar">
   <div class="sidebar-logo">
-    <h1>TỪ ĐIỂN SALE<br>MERCY TECH</h1>
-    <p>Bot Nhập Liệu Kho • v2.0</p>
+    <h1>PLAYBOOK SALE<br>MERCY TECH</h1>
+    <p>Bot Nhập Liệu Kho • v3.0</p>
   </div>
 
   <div class="sidebar-section-label">Tổng Quan</div>
@@ -849,52 +849,55 @@ body {
     <span class="icon"><i data-lucide="layout-dashboard"></i></span> Trang Chủ
   </a>
   <a class="nav-item" onclick="showPage('overview')" href="#">
-    <span class="icon"><i data-lucide="git-branch"></i></span> Sơ Đồ Tổng Quan
+    <span class="icon"><i data-lucide="git-branch"></i></span> Sơ Đồ 7 Bước
   </a>
 
-  <div class="sidebar-section-label">Quy Trình Sale</div>
+  <div class="sidebar-section-label">Quy Trình 7 Bước</div>
   <a class="nav-item" onclick="showPage('step1')" href="#">
-    <span class="icon"><i data-lucide="phone"></i></span> Bước 1 — Tiếp Cận
+    <span class="icon"><i data-lucide="phone"></i></span> B1 — Tiếp Nhận Lead
+  </a>
+  <a class="nav-item" onclick="showPage('discovery')" href="#">
+    <span class="icon"><i data-lucide="search"></i></span> B2 — Khai Thác Nỗi Đau ⭐
+  </a>
+  <a class="nav-item" onclick="showPage('diagnosis')" href="#">
+    <span class="icon"><i data-lucide="target"></i></span> B3 — Chẩn Đoán
+  </a>
+  <a class="nav-item" onclick="showPage('demo')" href="#">
+    <span class="icon"><i data-lucide="play-circle"></i></span> B4 — Demo Cá Nhân Hóa
   </a>
   <a class="nav-item" onclick="showPage('step2')" href="#">
-    <span class="icon"><i data-lucide="banknote"></i></span> Bước 2 — Thu Tiền
+    <span class="icon"><i data-lucide="receipt"></i></span> B5 — Báo Giá & Chốt
   </a>
   <a class="nav-item" onclick="showPage('step3')" href="#">
-    <span class="icon"><i data-lucide="clipboard-list"></i></span> Bước 3 — Thu Thập Info
-  </a>
-  <a class="nav-item" onclick="showPage('step4')" href="#">
-    <span class="icon"><i data-lucide="cpu"></i></span> Bước 4 — Setup Kỹ Thuật
-  </a>
-  <a class="nav-item" onclick="showPage('step5')" href="#">
-    <span class="icon"><i data-lucide="send"></i></span> Bước 5 — Bàn Giao
+    <span class="icon"><i data-lucide="clipboard-list"></i></span> B6 — Thu Tiền & Setup
   </a>
   <a class="nav-item" onclick="showPage('step6')" href="#">
-    <span class="icon"><i data-lucide="calendar"></i></span> Bước 6 — Follow Up
+    <span class="icon"><i data-lucide="calendar"></i></span> B7 — Onboarding
   </a>
 
-  <div class="sidebar-section-label">Công Cụ Sale</div>
+  <div class="sidebar-section-label">Thực Chiến</div>
+  <a class="nav-item" onclick="showPage('scenarios')" href="#">
+    <span class="icon"><i data-lucide="theater"></i></span> Kịch Bản Đóng Vai
+  </a>
+  <a class="nav-item" onclick="showPage('psychology')" href="#">
+    <span class="icon"><i data-lucide="brain"></i></span> Tâm Lý Khách Hàng
+  </a>
+  <a class="nav-item" onclick="showPage('objections')" href="#">
+    <span class="icon"><i data-lucide="shield"></i></span> Xử Lý Từ Chối
+  </a>
+
+  <div class="sidebar-section-label">Công Cụ</div>
+  <a class="nav-item" onclick="showPage('forms')" href="#">
+    <span class="icon"><i data-lucide="file-text"></i></span> Forms &amp; Mẫu
+  </a>
+  <a class="nav-item" onclick="showPage('pricing')" href="#">
+    <span class="icon"><i data-lucide="tag"></i></span> Bảng Giá
+  </a>
   <a class="nav-item" onclick="showPage('qa')" href="#">
     <span class="icon"><i data-lucide="help-circle"></i></span> Q&amp;A Khách Hỏi
   </a>
-  <a class="nav-item" onclick="showPage('objections')" href="#">
-    <span class="icon"><i data-lucide="shield"></i></span> Phản Biện Từ Chối
-  </a>
-  <a class="nav-item" onclick="showPage('forms')" href="#">
-    <span class="icon"><i data-lucide="file-text"></i></span> Forms &amp; Mẫu Gửi
-  </a>
-  <a class="nav-item" onclick="showPage('pricing')" href="#">
-    <span class="icon"><i data-lucide="tag"></i></span> Bảng Giá &amp; Gói
-  </a>
-
-  <div class="sidebar-section-label">Phân Tích</div>
   <a class="nav-item" onclick="showPage('products')" href="#">
     <span class="icon"><i data-lucide="box"></i></span> Mindmap Sản Phẩm
-  </a>
-  <a class="nav-item" onclick="showPage('customers')" href="#">
-    <span class="icon"><i data-lucide="users"></i></span> Mindmap Khách Hàng
-  </a>
-  <a class="nav-item" onclick="showPage('journey')" href="#">
-    <span class="icon"><i data-lucide="map"></i></span> Hành Trình Khách
   </a>
 </nav>
 
@@ -904,17 +907,17 @@ body {
     <span class="nav-tab-icon"><i data-lucide="layout-dashboard"></i></span>
     <span class="nav-tab-label">Trang Chủ</span>
   </button>
-  <button class="nav-tab" id="tab-overview" onclick="showPage('overview');setTab('overview')">
-    <span class="nav-tab-icon"><i data-lucide="git-branch"></i></span>
-    <span class="nav-tab-label">Sơ Đồ</span>
+  <button class="nav-tab" id="tab-discovery" onclick="showPage('discovery');setTab('discovery')">
+    <span class="nav-tab-icon"><i data-lucide="search"></i></span>
+    <span class="nav-tab-label">Discovery</span>
   </button>
-  <button class="nav-tab" id="tab-qa" onclick="showPage('qa');setTab('qa')">
-    <span class="nav-tab-icon"><i data-lucide="help-circle"></i></span>
-    <span class="nav-tab-label">Q&amp;A</span>
+  <button class="nav-tab" id="tab-scenarios" onclick="showPage('scenarios');setTab('scenarios')">
+    <span class="nav-tab-icon"><i data-lucide="theater"></i></span>
+    <span class="nav-tab-label">Kịch Bản</span>
   </button>
-  <button class="nav-tab" id="tab-forms" onclick="showPage('forms');setTab('forms')">
-    <span class="nav-tab-icon"><i data-lucide="file-text"></i></span>
-    <span class="nav-tab-label">Forms</span>
+  <button class="nav-tab" id="tab-objections" onclick="showPage('objections');setTab('objections')">
+    <span class="nav-tab-icon"><i data-lucide="shield"></i></span>
+    <span class="nav-tab-label">Từ Chối</span>
   </button>
   <button class="nav-tab" id="tab-pricing" onclick="showPage('pricing');setTab('pricing')">
     <span class="nav-tab-icon"><i data-lucide="tag"></i></span>
@@ -930,30 +933,30 @@ body {
   <div class="cover-page">
     <div class="cover-content">
       <div class="cover-emoji"><i data-lucide="book-open" style="width:60px;height:60px;stroke:rgba(255,255,255,0.85);stroke-width:1.2;fill:none;"></i></div>
-      <div class="cover-title">TỪ ĐIỂN SALE<br>MERCY TECH</div>
-      <div class="cover-sub">Bot Nhập Liệu Kho – Từ A Đến Z</div>
+      <div class="cover-title">PLAYBOOK SALE<br>MERCY TECH</div>
+      <div class="cover-sub">Bot Nhập Liệu Kho – 7 Bước Chốt Deal • v3.0</div>
       <div class="cover-badge">Tài Liệu Nội Bộ • Không Phổ Biến Ra Ngoài</div>
 
       <div class="cover-toc">
-        <div class="cover-toc-item" onclick="showPage('overview')">
-          <div class="ct-icon"><i data-lucide="git-branch"></i></div>
-          <div class="ct-title">Sơ Đồ Tổng Quan</div>
-          <div class="ct-sub">Nhìn 1 cái hiểu cả quy trình</div>
-        </div>
         <div class="cover-toc-item" onclick="showPage('step1')">
           <div class="ct-icon"><i data-lucide="phone"></i></div>
-          <div class="ct-title">Quy Trình Sale</div>
-          <div class="ct-sub">6 bước từ lead → khách</div>
+          <div class="ct-title">B1 — Tiếp Nhận Lead</div>
+          <div class="ct-sub">2 vai trò: CTV + Expert</div>
         </div>
-        <div class="cover-toc-item" onclick="showPage('qa')">
-          <div class="ct-icon"><i data-lucide="help-circle"></i></div>
-          <div class="ct-title">Q&amp;A Khách Hỏi</div>
-          <div class="ct-sub">Câu trả lời sẵn, copy paste</div>
+        <div class="cover-toc-item" onclick="showPage('discovery')">
+          <div class="ct-icon"><i data-lucide="search"></i></div>
+          <div class="ct-title">B2 — Khai Thác Nỗi Đau</div>
+          <div class="ct-sub">5 câu hỏi vàng, cây quyết định</div>
+        </div>
+        <div class="cover-toc-item" onclick="showPage('scenarios')">
+          <div class="ct-icon"><i data-lucide="theater"></i></div>
+          <div class="ct-title">Kịch Bản Đóng Vai</div>
+          <div class="ct-sub">4 tình huống thực tế A-Z</div>
         </div>
         <div class="cover-toc-item" onclick="showPage('objections')">
           <div class="ct-icon"><i data-lucide="shield"></i></div>
           <div class="ct-title">Xử Lý Từ Chối</div>
-          <div class="ct-sub">Mọi objection có sẵn đáp</div>
+          <div class="ct-sub">8 objection + script từ Trúc Anh</div>
         </div>
         <div class="cover-toc-item" onclick="showPage('forms')">
           <div class="ct-icon"><i data-lucide="file-text"></i></div>
@@ -1004,8 +1007,8 @@ body {
         <div class="flow-node warning">
           <div class="node-icon">💰</div>
           <div class="node-body">
-            <div class="node-title">THU 70% TRƯỜC SETUP — 4.200.000đ</div>
-            <div class="node-sub">Chưa nhận 70% = Không setup. 30% còn lại (1.800.000đ) thu sau go-live</div>
+            <div class="node-title">THU 70% TRƯỚC SETUP — 7.000.000đ</div>
+            <div class="node-sub">Chưa nhận 70% = Không setup. 30% còn lại (3.000.000đ) thu sau go-live</div>
           </div>
           <div class="badge red">BẮT BUỘC</div>
         </div>
@@ -1115,114 +1118,180 @@ body {
 <div id="page-step1" class="page">
   <div class="page-header">
     <div class="page-icon">📞</div>
-    <h2>Bước 1 — Tiếp Cận & Chốt</h2>
-    <p>Từ có SĐT → Khách đồng ý → Quy trình sale cụ thể</p>
+    <h2>B1 — Tiếp Nhận Lead</h2>
+    <p>2 vai trò phối hợp: Người Giới Thiệu tạo cầu nối → Sale Chuyên Gia tiếp quản</p>
   </div>
   <div class="page-body">
 
-    <div class="section-title">🔄 Sơ Đồ Bước 1</div>
+    <div class="section-title">👥 3 Vai Trò — 2 Nguồn Lead</div>
+    <table class="role-table">
+      <tr><th></th><th>MKT (Ads/Content)</th><th>Người Giới Thiệu (Referral)</th><th>Sale Chuyên Gia</th></tr>
+      <tr>
+        <td><b>Nhiệm vụ</b></td>
+        <td>Đăng bài FB, chạy ads, lấy lead → Lên lịch với Expert</td>
+        <td>Giới thiệu warm, tạo nhóm Zalo, add Expert</td>
+        <td>Tiếp quản. Discovery → Demo → Chốt.</td>
+      </tr>
+      <tr>
+        <td><b>Kênh</b></td>
+        <td>Facebook, Zalo OA, Landing page</td>
+        <td>Zalo, gặp trực tiếp (SG), meeting</td>
+        <td>Zalo nhóm / 1-1 / Google Meet</td>
+      </tr>
+      <tr>
+        <td><b>Không làm</b></td>
+        <td>Không tư vấn sâu, không chốt giá</td>
+        <td>Không pitch giá, không giải thích kỹ thuật</td>
+        <td>Không cold call — chỉ vào khi đã có lead</td>
+      </tr>
+    </table>
+
+    <div class="section-title">🔄 2 Nguồn Lead → Expert Tiếp Quản</div>
     <div class="sop-flow">
-      <div class="flow-title">QUY TRÌNH TIẾP CẬN KHÁCH</div>
+      <div class="flow-title">NGUỒN 1: MKT (ADS / CONTENT)</div>
       <div class="flow-nodes">
-        <div class="flow-node">
-          <div class="node-icon">📞</div>
-          <div class="node-body">
-            <div class="node-title">Có SĐT khách</div>
-            <div class="node-sub">Từ referral / ads / cold outreach</div>
-          </div>
-        </div>
+        <div class="flow-node"><div class="node-icon">📱</div><div class="node-body"><div class="node-title">MKT đăng bài FB / chạy ads</div><div class="node-sub">Khách inbox hỏi hoặc để lại SĐT</div></div><div class="badge">MKT</div></div>
         <div class="flow-arrow">↓</div>
-        <div class="flow-node">
-          <div class="node-icon">📱</div>
-          <div class="node-body">
-            <div class="node-title">Gọi điện hoặc nhắn Zalo</div>
-            <div class="node-sub">Ưu tiên gọi điện để tạo kết nối, fallback sang Zalo</div>
-          </div>
-        </div>
+        <div class="flow-node highlight"><div class="node-icon">💬</div><div class="node-body"><div class="node-title">MKT trả lời nhanh, qualify lead</div><div class="node-sub">Hỏi: ngành gì? quy mô? đang quản lý kho bằng gì?</div></div><div class="badge">MKT</div></div>
         <div class="flow-arrow">↓</div>
-
-        <div class="flow-branch">
-          <div class="flow-node warning">
-            <div class="node-icon">⏰</div>
-            <div class="node-body">
-              <div class="node-title">Khách bận</div>
-              <div class="node-sub">Hẹn giờ cụ thể: "Em gọi lại lúc 3h chiều nha anh?"</div>
-            </div>
-          </div>
-          <div class="flow-node danger">
-            <div class="node-icon">❌</div>
-            <div class="node-body">
-              <div class="node-title">Khách từ chối ngay</div>
-              <div class="node-sub">Ghi note CRM → Follow up tuần sau</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="flow-arrow">↓</div>
-        <div class="flow-node">
-          <div class="node-icon">🎯</div>
-          <div class="node-body">
-            <div class="node-title">Pitch 3 bước: Vấn đề → Giải pháp → Báo giá</div>
-            <div class="node-sub">Xem script mẫu bên dưới</div>
-          </div>
-        </div>
-        <div class="flow-arrow">↓</div>
-        <div class="flow-node success">
-          <div class="node-icon">✅</div>
-          <div class="node-body">
-            <div class="node-title">KHÁCH ĐỒNG Ý</div>
-            <div class="node-sub">→ Chuyển sang Bước 2: Thu tiền</div>
-          </div>
-          <div class="badge green">NEXT</div>
-        </div>
+        <div class="flow-node success"><div class="node-icon">📅</div><div class="node-body"><div class="node-title">Lên lịch với Sale Chuyên Gia</div><div class="node-sub">Tạo nhóm Zalo 3 người hoặc book meeting</div></div><div class="badge green">→ EXPERT</div></div>
       </div>
     </div>
 
-    <div class="section-title">🎯 Script Tư Vấn Mẫu (Qua Điện Thoại)</div>
+    <div class="sop-flow">
+      <div class="flow-title">NGUỒN 2: REFERRAL (NGƯỜI GIỚI THIỆU)</div>
+      <div class="flow-nodes">
+        <div class="flow-node"><div class="node-icon">🤝</div><div class="node-body"><div class="node-title">Bạn bè / đối tác biết người có nhu cầu</div><div class="node-sub">Networking, khách cũ, đối tác</div></div><div class="badge">REF</div></div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-node highlight"><div class="node-icon">💬</div><div class="node-body"><div class="node-title">Giới thiệu warm → Tạo nhóm Zalo</div><div class="node-sub">Add khách + Expert vào nhóm</div></div><div class="badge">REF</div></div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-node success"><div class="node-icon">🎯</div><div class="node-body"><div class="node-title">Expert chào + bắt đầu Discovery</div><div class="node-sub">→ Chuyển sang B2</div></div><div class="badge green">→ EXPERT</div></div>
+      </div>
+    </div>
+
+    <div class="section-title">📋 Script MKT — Trả Lời Lead Từ Facebook</div>
     <div class="zalo-box">
-      <div class="zalo-header">📞 SCRIPT GỌI ĐIỆN — PITCH 3 BƯỚC</div>
-      <div class="zalo-body">Mở đầu:
-"Chào anh/chị [Tên], em là [Tên] từ Mercy Tech. Em đang hỗ trợ mấy anh chị kinh doanh, cửa hàng quản lý kho bằng bot tự động. Em xin 2 phút nha?"
+      <div class="zalo-header" style="background:#1877F2;">📱 MKT TRẢ LỜI INBOX FACEBOOK</div>
+      <div class="zalo-body" id="mkt-fb-reply">Chào anh/chị! Cảm ơn anh/chị đã quan tâm ạ.
+
+Để em tư vấn chính xác nhất, cho em hỏi nhanh:
+👉 Anh/chị đang kinh doanh ngành gì ạ?
+👉 Hiện đang quản lý kho bằng cách nào (sổ tay / Excel / phần mềm)?
+
+Em sẽ kết nối anh/chị với chuyên gia tư vấn bên em để trao đổi chi tiết hơn nha!</div>
+      <button class="copy-btn" onclick="copyText(this, document.getElementById('mkt-fb-reply').textContent)">📋 Copy</button>
+    </div>
+
+    <div class="info-box tip">
+      <div class="ib-icon">💡</div>
+      <div><b>MKT chỉ qualify, không tư vấn sâu.</b> Hỏi 2 câu → ghi note → chuyển Expert. Đừng cố giải thích kỹ thuật hay báo giá — để Expert làm.</div>
+    </div>
+
+    <div class="section-title">📋 Script Người Giới Thiệu — Tạo Nhóm Zalo</div>
+
+    <div class="zalo-box">
+      <div class="zalo-header" style="background:#8B5CF6;">💬 CTV NÓI VỚI KHÁCH (TRƯỚC KHI TẠO NHÓM)</div>
+      <div class="zalo-body" id="ctv-intro">[Tên khách] ơi, mình biết bên Mercy Tech có giải pháp bot AI quản lý kho tự động hay lắm — nhân viên chỉ cần nhắn tin hoặc chụp ảnh phiếu là bot tự ghi vào Excel luôn, không cần sổ sách gì hết.
+
+Để mình tạo nhóm add chuyên gia bên đó vô, bạn trao đổi thử xem có phù hợp không. Không mua cũng không sao, nghe tư vấn free thôi.</div>
+      <button class="copy-btn" onclick="copyText(this, document.getElementById('ctv-intro').textContent)">📋 Copy</button>
+    </div>
+
+    <div class="zalo-box">
+      <div class="zalo-header" style="background:#8B5CF6;">💬 CTV GIỚI THIỆU TRONG NHÓM (SAU KHI TẠO NHÓM)</div>
+      <div class="zalo-body" id="ctv-group-intro">Chào mọi người!
+
+Anh/chị [Tên khách] — đây là [Tên Sale Chuyên Gia] bên Mercy Tech, chuyên về giải pháp tự động hóa quản lý kho cho doanh nghiệp.
+
+[Tên khách] đang kinh doanh [ngành], mình thấy giải pháp bên Mercy có thể hỗ trợ được. Để [Tên Expert] trao đổi thêm nha!
+
+Mình rút lui, hai bạn nói chuyện nhé 😊</div>
+      <button class="copy-btn" onclick="copyText(this, document.getElementById('ctv-group-intro').textContent)">📋 Copy</button>
+    </div>
+
+    <div class="info-box tip">
+      <div class="ib-icon">💡</div>
+      <div><b>Vì sao CTV nên rút lui?</b> Để khách thoải mái hỏi giá, hỏi kỹ thuật mà không ngại "người quen" nghe. Expert sẽ chuyển sang chat 1-1 nếu cần.</div>
+    </div>
+
+    <div class="section-title">🎯 Script Sale Chuyên Gia — Vào Nhóm Lần Đầu</div>
+
+    <div class="zalo-box">
+      <div class="zalo-header" style="background:#007AFF;">🧑‍💼 EXPERT — TIN NHẮN ĐẦU TIÊN TRONG NHÓM</div>
+      <div class="zalo-body" id="expert-first-msg">Chào anh/chị [Tên khách]! 
+
+Em là [Tên] — chuyên gia tư vấn giải pháp quản lý kho bên Mercy Tech.
+
+Cảm ơn anh/chị [Tên CTV] đã kết nối! 
+
+Trước khi em chia sẻ gì, em muốn hiểu thêm về tình trạng hiện tại của anh/chị:
+
+👉 Anh/chị đang kinh doanh mặt hàng gì ạ?
+👉 Hiện tại đang quản lý kho / nhập xuất bằng cách nào (sổ tay / Excel / phần mềm)?
+
+Em hỏi để xem giải pháp có thực sự phù hợp không — chứ không phải bán ạ 😊</div>
+      <button class="copy-btn" onclick="copyText(this, document.getElementById('expert-first-msg').textContent)">📋 Copy</button>
+    </div>
+
+    <div class="info-box danger">
+      <div class="ib-icon">🚫</div>
+      <div><b>KHÔNG BAO GIỜ BÁO GIÁ Ở BƯỚC NÀY.</b><br>Khách chưa biết mình là ai, chưa tin sản phẩm giải quyết được gì. Báo giá lúc này = khách từ chối 100%. Mục tiêu B1: XIN PHÉP DISCOVERY.</div>
+    </div>
+
+    <div class="section-title">🎯 Script Tư Vấn Mẫu (Qua Điện Thoại)</div>
+
+    <div class="info-box danger">
+      <div class="ib-icon">🚫</div>
+      <div><b>KHÔNG BAO GIỜ BÁO GIÁ Ở BƯỚC NÀY.</b><br>Khách chưa biết mình là ai, chưa tin sản phẩm giải quyết được gì. Báo giá lúc này = khách từ chối 100%. Mục tiêu B1: XIN 5 PHÚT để Discovery.</div>
+    </div>
+
+    <div class="zalo-box">
+      <div class="zalo-header">📞 SCRIPT GỌI ĐIỆN — MỤC TIÊU: XIN 5 PHÚT</div>
+      <div class="zalo-body">Mở đầu (15 giây):
+"Chào anh/chị [Tên], em là [Tên] từ Mercy Tech. Em đang hỗ trợ mấy anh chị kinh doanh [ngành của khách] quản lý kho tự động. Em xin anh/chị 2 phút được không ạ?"
+
+→ Nếu OK: Chuyển sang Discovery
+→ Nếu bận: "Dạ em hiểu, em xin gọi lại lúc nào tiện nhất cho anh/chị ạ?"
 
 —
 
-VẤN ĐỀ (Chạm vào nỗi đau):
-"Anh/chị có đang gặp vấn đề: nhân viên quên ghi hàng, sổ sách lộn xộn, không biết tồn kho còn bao nhiêu không ạ?"
+Discovery nhanh (Câu 3 — KEY):
+"Anh/chị đang quản lý kho/nhập liệu bằng cách nào ạ? Có hay bị lệch tồn kho hoặc nhân viên quên ghi không?"
+
+→ Khách nói ra nỗi đau → GHI LẠI
 
 —
 
-GIẢI PHÁP (Bot giải quyết):
-"Bot của em hoạt động qua Telegram — nhân viên chỉ cần nhắn tin kiểu 'nhập kho 50kg thịt bò' là bot tự ghi vào sheet, tự báo tồn kho. Không cần viết tay, không sợ thiếu sót."
+Kết thúc — KHÔNG báo giá, hẹn xem demo:
+"Em hiểu rồi ạ. Bên em có giải pháp xử lý đúng vấn đề này. Em gửi anh/chị 1 video demo 2 phút qua Zalo xem thử — nếu thấy phù hợp mình trao đổi thêm nha?"
 
-—
-
-BÁO GIÁ:
-"Giá gốc setup 12.000.000đ, hiện đang có chương trình đặc biệt chỉ còn 6.000.000đ (giảm 50%). Thanh toán 70% trước khi setup (4.200.000đ), 30% còn lại sau khi go-live (1.800.000đ). Dùng thử 1 tuần, không hài lòng hoàn tiền 100%.
-Anh/chị muốn thử không ạ?"</div>
+⚠️ TUYỆT ĐỐI KHÔNG NÓI GIÁ. Nếu khách hỏi giá → "Dạ giá tùy thuộc quy mô kho của anh/chị, em cần hiểu thêm để báo chính xác ạ."</div>
     </div>
 
     <div class="section-title">📱 Script Nhắn Zalo (Lần Đầu)</div>
     <div class="zalo-box">
-      <div class="zalo-header">💬 NHẮN ZALO LẦN ĐẦU</div>
-      <div class="zalo-body">Chào anh/chị [Tên],
+      <div class="zalo-header">💬 NHẮN ZALO LẦN ĐẦU — CHỈ TẠO TÒ MÒ</div>
+      <div class="zalo-body" id="zalo-first-msg">Chào anh/chị [Tên],
 
 Em là [Tên] từ Mercy Tech.
 
-Em đang hỗ trợ mấy anh chị kinh doanh dùng bot Telegram để quản lý kho tự động — nhân viên chỉ nhắn tin là xong, không cần sổ sách thủ công.
+Em đang hỗ trợ mấy anh chị kinh doanh dùng bot AI để quản lý kho tự động — nhân viên chỉ nhắn tin hoặc chụp ảnh phiếu là bot tự ghi vào Excel, không cần sổ sách thủ công.
 
-Chi phí setup: <s style="opacity:0.5">12 triệu</s> → chỉ còn <b>6.000.000đ</b> (thanh toán 70/30: 4.200.000đ trước — 1.800.000đ sau go-live) + <b>300k/tháng</b> duy trì.
-Dùng thử 1 tuần, không vừa ý hoàn tiền liền.
+Anh/chị đang quản lý kho bằng gì ạ? Em muốn hiểu thêm để xem giải pháp có phù hợp không, gửi anh/chị video demo 2 phút xem thử nha!</div>
+      <button class="copy-btn" onclick="copyText(this, document.getElementById('zalo-first-msg').textContent)">📋 Copy tin nhắn</button>
+    </div>
 
-Anh/chị có muốn em gửi video demo 2 phút xem thử không ạ?</div>
-      <button class="copy-btn" onclick="copyText(this, 'Chào anh/chị [Tên],\n\nEm là [Tên] từ Mercy Tech.\n\nEm đang hỗ trợ mấy anh chị kinh doanh dùng bot Telegram để quản lý kho tự động — nhân viên chỉ nhắn tin là xong, không cần sổ sách thủ công.\n\nChi phí setup: giá gốc 12 triệu, đang KM còn 6.000.000đ (thanh toán 70/30: 4.200.000đ trước — 1.800.000đ sau go-live). Dùng thử 1 tuần, không vừa ý hoàn tiền liền.\n\nAnh/chị có muốn em gửi video demo 2 phút xem thử không ạ?')">📋 Copy tin nhắn</button>
+    <div class="info-box tip">
+      <div class="ib-icon">💡</div>
+      <div><b>Tip quan trọng:</b> Tin nhắn đầu tiên KHÔNG có giá. Chỉ có: (1) Giới thiệu ngắn, (2) Gợi mở giải pháp, (3) Hỏi 1 câu Discovery. Giá chỉ xuất hiện ở B5 — sau khi khách đã thấy demo và tin.</div>
     </div>
 
     <div class="info-box warn">
       <div class="ib-icon">⚠️</div>
-      <div><b>Tip quan trọng:</b> Luôn hỏi xin 2 phút trước — không pitch ngay khi khách bắt máy. Tạo sự đồng thuận trước bao giờ cũng hiệu quả hơn.</div>
+      <div><b>Khi khách hỏi giá ngay:</b> "Dạ giá tùy thuộc quy mô kho và số lượng mặt hàng của anh/chị, em cần hiểu thêm để báo chính xác nhất ạ. Anh/chị cho em biết thêm 2 phút nha?"</div>
     </div>
 
-    <div class="section-title">Sau Khi Báo Giá — 3 Kịch Bản</div>
+    <div class="section-title">Sau Lần Tiếp Cận Đầu — Follow-up</div>
 
     <div class="sop-flow">
       <div class="flow-title">XỬ LÝ SAU BÁO GIÁ</div>
@@ -1339,9 +1408,9 @@ Nếu anh/chị muốn thử, em có thể setup demo miễn phí để xem tr�
 
     <div class="zalo-box">
       <div class="zalo-header" style="background:#f59e0b;">FOLLOW-UP D+7 — Last call / Tạo deadline</div>
-      <div class="zalo-body" id="fu-d7">Anh/chị ơi, em muốn báo là chương trình giá KM 6 triệu của mình đến cuối tuần này là hết hạn, sau đó giá sẽ về 8 triệu.
+      <div class="zalo-body" id="fu-d7">Anh/chị ơi, giá hiện tại 10 triệu đang bao gồm quà tặng trị giá 5 triệu (Bot báo cáo tồn kho + Bộ SOP vận hành). Chương trình tặng quà này chỉ áp dụng đến hết ngày [NGÀY].
 
-Nếu anh/chị muốn chốt giá tốt thì em giữ slot cho mình đến hết ngày [NGÀY] nha.
+Nếu anh/chị muốn chốt em giữ slot cho mình nha.
 
 Hoặc anh/chị có câu hỏi gì em giải đáp trước nhé?</div>
       <button class="copy-btn" onclick="copyText(this, document.getElementById('fu-d7').textContent)">📋 Copy tin nhắn</button>
@@ -1369,6 +1438,239 @@ Nếu anh/chị chưa tìm được giải pháp phù hợp, em vẫn có thể 
   </div>
 </div>
 
+<!-- DISCOVERY (B2) -->
+<div id="page-discovery" class="page">
+  <div class="page-header">
+    <div class="page-icon">🔍</div>
+    <h2>B2 — Khai Thác Nỗi Đau</h2>
+    <p>Bước quan trọng nhất — hỏi đúng câu, tìm đúng đau, bán đúng thứ</p>
+  </div>
+  <div class="page-body">
+
+    <div class="info-box danger">
+      <div class="ib-icon">🚫</div>
+      <div><b>SAI LẦM #1 CỦA SALE MỚI:</b> Pitch tính năng ngay khi khách bắt máy. Khách chưa thấy mình CÓ VẤN ĐỀ thì không bao giờ mua giải pháp.</div>
+    </div>
+
+    <div class="section-title">🧠 2 Loại Khách — 2 Nỗi Đau Khác Nhau</div>
+    <table class="role-table">
+      <tr><th>Đối tượng</th><th>Nỗi đau cốt lõi</th><th>Từ khóa kích hoạt</th></tr>
+      <tr>
+        <td><b>Chủ DN / Chủ cửa hàng</b></td>
+        <td>Sợ <b>MẤT TIỀN</b> > sợ không kiếm tiền.<br>"Lời ảo — Lỗ thật": Tiền vô két mỗi ngày nhưng cuối tháng kiểm kho thấy hụt NVL.<br>Chi phí ẩn: NV nhập liệu 5-6tr + Quản lý giám sát 8tr/tháng.</td>
+        <td>Thất thoát, lệch kho, NV nghỉ, mất kiểm soát</td>
+      </tr>
+      <tr>
+        <td><b>Kế toán / Vận hành</b></td>
+        <td>Tốn <b>THỜI GIAN</b> & sai số dây chuyền.<br>F&B: 1 ly trà sữa → trừ 50g đường, 100ml sữa... rất mệt.<br>Sỉ: 200+ SKU, dò mắt trên Excel, gõ nhầm 1 dòng → sai cả tháng.</td>
+        <td>Nhập tay mệt, Excel chậm, sai số, cuối ca mệt gõ sót</td>
+      </tr>
+    </table>
+
+    <div class="section-title">🔍 Câu Hỏi Discovery — Áp Dụng Mọi Ngành</div>
+    <div class="sop-flow">
+      <div class="flow-title">5 CÂU HỎI VÀNG — HỎI THEO THỨ TỰ</div>
+      <div class="flow-nodes">
+        <div class="flow-node highlight"><div class="node-icon">1️⃣</div><div class="node-body"><div class="node-title">"Anh/chị đang kinh doanh ngành gì, quy mô khoảng bao nhiêu người?"</div><div class="node-sub">→ Xác định ngành + quy mô → chọn bộ câu hỏi theo ngành</div></div></div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-node"><div class="node-icon">2️⃣</div><div class="node-body"><div class="node-title">"Hiện tại anh/chị đang quản lý kho / nhập liệu bằng cách nào?"</div><div class="node-sub">→ Ghi tay? Excel? POS? → Xác định pain point workflow</div></div></div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-node warning"><div class="node-icon">3️⃣</div><div class="node-body"><div class="node-title">"Phần nào tốn thời gian nhất / hay sai nhất trong ngày?"</div><div class="node-sub">→ ĐÂY LÀ CÂU QUAN TRỌNG NHẤT. Khách tự nói ra pain point.</div></div><div class="badge red">KEY</div></div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-node"><div class="node-icon">4️⃣</div><div class="node-body"><div class="node-title">"Đã từng thử phần mềm/giải pháp gì chưa? Kết quả sao?"</div><div class="node-sub">→ Hiểu kỳ vọng + rào cản + đối thủ đã thử</div></div></div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-node success"><div class="node-icon">5️⃣</div><div class="node-body"><div class="node-title">"Nếu có 1 giải pháp xử lý được [pain point], anh/chị sẵn sàng đầu tư bao nhiêu?"</div><div class="node-sub">→ Đánh giá ngân sách + mức sẵn sàng mua</div></div></div>
+      </div>
+    </div>
+
+    <div class="section-title">🏭 Câu Hỏi Sâu Theo Ngành</div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0;">
+      <div style="background:#fff;border-radius:16px;padding:20px;box-shadow:0 1px 3px rgba(0,0,0,0.08);">
+        <div style="font-size:18px;margin-bottom:8px;">🍜</div>
+        <div style="font-size:13px;font-weight:800;color:#1C1C1E;margin-bottom:10px;">F&B / Nhà Hàng / Quán Ăn</div>
+        <div style="font-size:12.5px;color:#3A3A3C;line-height:1.8;">
+          • Mỗi ngày nhập bao nhiêu loại NVL?<br>
+          • Ai ghi chép? Mấy người cần nhập?<br>
+          • Có hay lệch tồn kho không? Lệch bao nhiêu %?<br>
+          • NV gom bill cuối ca hay nhập real-time?<br>
+          • Có công thức pha chế không? (trà sữa, cocktail)
+        </div>
+      </div>
+      <div style="background:#fff;border-radius:16px;padding:20px;box-shadow:0 1px 3px rgba(0,0,0,0.08);">
+        <div style="font-size:18px;margin-bottom:8px;">🏪</div>
+        <div style="font-size:13px;font-weight:800;color:#1C1C1E;margin-bottom:10px;">Bán Lẻ / Tạp Hóa</div>
+        <div style="font-size:12.5px;color:#3A3A3C;line-height:1.8;">
+          • Bao nhiêu SKU trong kho?<br>
+          • Bao nhiêu chi nhánh?<br>
+          • Dùng POS chưa? POS có quản lý kho không?<br>
+          • Hay bị hết hàng mà không biết?<br>
+          • Thất thoát bao nhiêu / tháng?
+        </div>
+      </div>
+      <div style="background:#fff;border-radius:16px;padding:20px;box-shadow:0 1px 3px rgba(0,0,0,0.08);">
+        <div style="font-size:18px;margin-bottom:8px;">🏗️</div>
+        <div style="font-size:13px;font-weight:800;color:#1C1C1E;margin-bottom:10px;">Kho / Bán Sỉ / VLXD</div>
+        <div style="font-size:12.5px;color:#3A3A3C;line-height:1.8;">
+          • Quy trình giao hàng sao? Mấy người dùng Excel?<br>
+          • Phiếu giao hàng xử lý thế nào?<br>
+          • Sai sót bao nhiêu lần/tháng?<br>
+          • Thủ kho dò bằng mắt hay scan?<br>
+          • Có cần theo dõi NCC không?
+        </div>
+      </div>
+      <div style="background:#fff;border-radius:16px;padding:20px;box-shadow:0 1px 3px rgba(0,0,0,0.08);">
+        <div style="font-size:18px;margin-bottom:8px;">🏭</div>
+        <div style="font-size:13px;font-weight:800;color:#1C1C1E;margin-bottom:10px;">Sản Xuất / Xưởng May</div>
+        <div style="font-size:12.5px;color:#3A3A3C;line-height:1.8;">
+          • Nhập NL → ra TP quy trình sao?<br>
+          • Bao nhiêu mã SKU/size/màu?<br>
+          • Cần theo dõi batch/lô không?<br>
+          • Mỗi lần hàng về có bao nhiêu phiếu?<br>
+          • Kiểm đầu ca / cuối ca thế nào?
+        </div>
+      </div>
+    </div>
+
+    <div class="section-title">🌳 Cây Quyết Định — Từ Câu Trả Lời → Nỗi Đau → Tính Năng Bot</div>
+    <table class="role-table">
+      <tr><th>Khách nói gì?</th><th>Nỗi đau thật</th><th>Tính năng bot match</th></tr>
+      <tr><td>"NV hay quên ghi"</td><td>Thất thoát hàng hóa</td><td>Bot nhập tự động qua Telegram</td></tr>
+      <tr><td>"Tồn kho sai lệch"</td><td>Mất tiền không biết</td><td>Kiểm kho + đối soát cuối ngày</td></tr>
+      <tr><td>"Không biết lãi lỗ"</td><td>Mù số liệu kinh doanh</td><td>Báo cáo tồn kho tự động mỗi sáng</td></tr>
+      <tr><td>"Excel chậm quá"</td><td>Workflow lạc hậu</td><td>Real-time trên Telegram, cập nhật tức thì</td></tr>
+      <tr><td>"Sợ NV ăn cắp hàng"</td><td>Mất niềm tin vào nhân sự</td><td>Log + timestamp ai nhập gì lúc nào</td></tr>
+      <tr><td>"Hay hết hàng hot"</td><td>Mất doanh thu</td><td>Cảnh báo tồn thấp + báo cáo hàng sắp hết</td></tr>
+    </table>
+
+    <div class="info-box tip">
+      <div class="ib-icon">💡</div>
+      <div><b>Nguyên tắc vàng của anh Trúc Anh:</b> Chỉ pitch đúng 2-3 tính năng match với nỗi đau khách vừa nói. KHÔNG NÓI "bot làm được 20 thứ" — khách sẽ choáng và từ chối.</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- B3 DIAGNOSIS -->
+<div id="page-diagnosis" class="page">
+  <div class="page-header">
+    <div class="page-icon">🎯</div>
+    <h2>B3 — Chẩn Đoán & Match</h2>
+    <p>Khách vừa nói ra nỗi đau → Expert phản hồi đúng → Khách tin</p>
+  </div>
+  <div class="page-body">
+
+    <div class="info-box warn">
+      <div class="ib-icon">⚠️</div>
+      <div><b>Luôn nhớ:</b> Chỉ pitch 2-3 tính năng match đúng nỗi đau. Nói "bot làm được 20 thứ" = khách choáng = từ chối.</div>
+    </div>
+
+    <div class="section-title">💬 Khách Trả Lời Discovery → Expert Nói Gì Tiếp</div>
+
+    <div class="objection-grid">
+      <div class="obj-card">
+        <div class="obj-q" style="background:#FFF8EB;border-left:3px solid #FF9500;">Khách: "Mình ghi sổ tay thôi"</div>
+        <div class="obj-a">"Dạ vậy mỗi ngày ai ghi? Có hay bị quên không ạ? Bot của em đơn giản hơn sổ tay — NV chỉ nhắn tin 'nhập 5kg thịt bò' là bot ghi vào bảng luôn. Không cần mở sổ, không sợ quên."</div>
+      </div>
+      <div class="obj-card">
+        <div class="obj-q" style="background:#EBF4FF;border-left:3px solid #007AFF;">Khách: "Mình đang dùng Excel"</div>
+        <div class="obj-a">"Dạ Excel thì mấy người dùng chung file ạ? Có hay bị đè nhau không? Bot em thay vì gõ vào Excel, NV chỉ nhắn tin → bot tự ghi vào Google Sheet, real-time, mấy người xem cùng lúc không bao giờ đè nhau."</div>
+      </div>
+      <div class="obj-card">
+        <div class="obj-q" style="background:#EBFAF0;border-left:3px solid #34C759;">Khách: "Mình dùng KiotViet / POS rồi"</div>
+        <div class="obj-a">"Dạ hay quá! KiotViet quản lý bán hàng rất tốt. Nhưng phần KHO — nhập nguyên liệu, kiểm tồn, đối soát — POS thường không làm sâu được. Bot em bổ sung cho POS, không thay thế. Hai cái chạy song song."</div>
+      </div>
+      <div class="obj-card">
+        <div class="obj-q" style="background:#FFEBEB;border-left:3px solid #FF3B30;">Khách: "Mình có 2-3 chi nhánh"</div>
+        <div class="obj-a">"Dạ hay luôn! Bot em tách riêng từng chi nhánh — mỗi chi nhánh 1 nhóm Telegram riêng. Chị ngồi ở nhà vẫn xem được tồn kho tất cả chi nhánh real-time trên Google Sheet."</div>
+      </div>
+    </div>
+
+    <div class="section-title">🚫 Khi Khách Ép Hỏi Giá Ở B2/B3</div>
+    <div class="zalo-box">
+      <div class="zalo-header" style="background:#FF3B30;">⚠️ KHÁCH HỎI "GIÁ BAO NHIÊU?" — SCRIPT NÉ GIÁ</div>
+      <div class="zalo-body" id="dodge-price">"Dạ giá tùy thuộc quy mô kho và số lượng mặt hàng của anh/chị. Ví dụ kho 50 SKU khác với kho 300 SKU. Em cần hiểu thêm 2 phút để báo chính xác nhất — chứ báo đại sợ không đúng với nhu cầu thực tế.
+
+Anh/chị hiện tại có bao nhiêu loại hàng ạ?"
+
+→ Chuyển ngược về Discovery, KHÔNG trả lời giá.</div>
+      <button class="copy-btn" onclick="copyText(this, document.getElementById('dodge-price').textContent)">📋 Copy</button>
+    </div>
+
+    <div class="section-title">📞 Tại Sao Telegram Chứ Không Phải Zalo?</div>
+    <div class="info-box info">
+      <div class="ib-icon">📱</div>
+      <div>
+        <b>100% khách sẽ hỏi câu này.</b> Học thuộc:<br><br>
+        "Dạ em chọn Telegram vì 3 lý do:<br>
+        <b>1.</b> Zalo hay quét bot → bot bị khóa bất cứ lúc nào, khách mất dữ liệu.<br>
+        <b>2.</b> Telegram cho phép bot hoạt động 24/7 ổn định, không bị giới hạn.<br>
+        <b>3.</b> Cài Telegram chỉ mất 2 phút, giao diện y như Zalo thôi ạ."<br><br>
+        <em>Nếu khách vẫn ngại: "Em hướng dẫn NV cài ngay trong 2 phút, có video hướng dẫn luôn ạ."</em>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- B4 DEMO -->
+<div id="page-demo" class="page">
+  <div class="page-header">
+    <div class="page-icon">🎥</div>
+    <h2>B4 — Demo Cá Nhân Hóa</h2>
+    <p>Cho khách XEM bằng chứng — không chỉ NGHE lời hứa</p>
+  </div>
+  <div class="page-body">
+
+    <div class="section-title">🎯 3 Cách Demo — Tùy Tình Huống</div>
+    <table class="role-table">
+      <tr><th>Cách</th><th>Khi nào</th><th>Cách làm</th></tr>
+      <tr>
+        <td><b>Video demo 2 phút</b></td>
+        <td>Khách mới tò mò, chưa sẵn sàng call</td>
+        <td>Gửi video quay sẵn qua Zalo. Video phải có: nhắn tin → bot xử lý → data vào Sheet.</td>
+      </tr>
+      <tr>
+        <td><b>Demo live 15 phút</b></td>
+        <td>Khách quan tâm, muốn xem chi tiết</td>
+        <td>Zalo call / Google Meet. Mở bot template, dùng TÊN HÀNG CỦA KHÁCH để demo.</td>
+      </tr>
+      <tr>
+        <td><b>Gặp trực tiếp (SG)</b></td>
+        <td>Khách ở HCM, deal lớn, cần trust cao</td>
+        <td>Mang laptop, demo live tại quán/cửa hàng. Cho NV thử nhắn tin nhập hàng ngay tại chỗ.</td>
+      </tr>
+    </table>
+
+    <div class="section-title">📝 Checklist Trước Demo</div>
+    <div style="background:#fff;border-radius:16px;padding:16px 20px;box-shadow:0 1px 3px rgba(0,0,0,0.08);margin:12px 0;">
+      <div style="font-size:13px;line-height:2;color:#3A3A3C;">
+        ☐ Biết khách bán mặt hàng gì (từ B2)<br>
+        ☐ Tạo sẵn 5-10 mặt hàng mẫu theo ngành khách<br>
+        ☐ Mở bot template sẵn sàng<br>
+        ☐ Mở Google Sheet demo sẵn sàng<br>
+        ☐ Chuẩn bị script "Tại sao Telegram" (100% sẽ hỏi)<br>
+        ☐ Nếu gặp trực tiếp: sạc laptop, 4G backup
+      </div>
+    </div>
+
+    <div class="section-title">🎬 Kịch Bản Demo Live 15 Phút</div>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-dot">1</div><div class="tl-content"><div class="tl-label">Phút 0-2: Recap nỗi đau</div><div class="tl-msg">"Hôm trước anh/chị nói [nỗi đau]. Hôm nay em demo cho anh/chị xem bot xử lý đúng phần đó nha."</div></div></div>
+      <div class="tl-item"><div class="tl-dot yellow">2</div><div class="tl-content"><div class="tl-label">Phút 2-5: Demo nhập kho</div><div class="tl-msg">Mở Telegram → Nhắn "nhập 10kg thịt bò, 5 thùng mì" → Cho khách xem bot phản hồi → Mở Sheet cho xem data vào real-time.</div></div></div>
+      <div class="tl-item"><div class="tl-dot green">3</div><div class="tl-content"><div class="tl-label">Phút 5-8: Demo xuất kho + tồn</div><div class="tl-msg">Nhắn "xuất 3kg thịt bò" → Bot trừ tồn → Nhắn "tồn kho" → Bot báo tồn hiện tại. Khách thấy real-time.</div></div></div>
+      <div class="tl-item"><div class="tl-dot">4</div><div class="tl-content"><div class="tl-label">Phút 8-10: Demo báo cáo tự động</div><div class="tl-msg">"Sáng mai 8h bot tự gửi báo cáo tồn kho vào nhóm Telegram. Anh/chị không cần mở gì hết, nằm trên giường cũng biết kho còn gì."</div></div></div>
+      <div class="tl-item"><div class="tl-dot red">5</div><div class="tl-content"><div class="tl-label">Phút 10-15: Hỏi feedback + Chuyển B5</div><div class="tl-msg">"Anh/chị thấy phần nào hay nhất? Phần nào anh/chị muốn dùng ngay?" → Micro-yes → "Để em gửi anh/chị bảng giá chi tiết nha?"</div></div></div>
+    </div>
+
+    <div class="info-box tip">
+      <div class="ib-icon">💡</div>
+      <div><b>Trick: Dùng tên hàng thật của khách.</b> Thay vì demo "thịt bò, trứng" chung chung, dùng đúng NVL khách nói ở B2. Ví dụ khách bán bún bò → demo "nhập 5kg gân bò, 3kg bắp bò, 2 bó rau muống". Khách sẽ WOW vì thấy "giải pháp y như làm cho mình".</div>
+    </div>
+
+  </div>
+</div>
+
 <!-- STEP 2 -->
 <div id="page-step2" class="page">
   <div class="page-header">
@@ -1389,7 +1691,7 @@ Nếu anh/chị chưa tìm được giải pháp phù hợp, em vẫn có thể 
         <div class="flow-node warning">
           <div class="node-icon">🏦</div>
           <div class="node-body">
-            <div class="node-title">Thu 70% trước — 4.200.000đ</div>
+            <div class="node-title">Thu 70% trước — 7.000.000đ</div>
             <div class="node-sub">Gửi STK + nội dung CK → nhận được mới bắt đầu setup</div>
           </div>
           <div class="badge red">BẮT BUỘC</div>
@@ -1406,7 +1708,7 @@ Nếu anh/chị chưa tìm được giải pháp phù hợp, em vẫn có thể 
         <div class="flow-node highlight">
           <div class="node-icon">💰</div>
           <div class="node-body">
-            <div class="node-title">Thu 30% còn lại — 1.800.000đ</div>
+            <div class="node-title">Thu 30% còn lại — 3.000.000đ</div>
             <div class="node-sub">Sau khi khách xác nhận đã dùng được và hài lòng</div>
           </div>
           <div class="badge green">DONE</div>
@@ -1447,18 +1749,18 @@ Nếu anh/chị chưa tìm được giải pháp phù hợp, em vẫn có thể 
 
 Bên em áp dụng lộ trình thanh toán 70/30 cho anh/chị:
 
-Đợt 1 — 70% trước khi setup (4.200.000đ):
+Đợt 1 — 70% trước khi setup (7.000.000đ):
 - Ngân hàng: Vietcombank
 - STK: 1072128668
 - Tên: CONG TY TNHH CONG NGHE MERCY
 - Nội dung CK: SETUP70 [TÊN KHÁCH]
 
-Đợt 2 — 30% sau khi go-live (1.800.000đ):
+Đợt 2 — 30% sau khi go-live (3.000.000đ):
 - Cùng thông tin trên
 - Nội dung CK: SETUP30 [TÊN KHÁCH]
 
 Anh/chị chuyển đợt 1 xong chụp màn hình gửi em nha, em nhận được là bắt tay vào setup liền.</div>
-      <button class="copy-btn" onclick="copyText(this, 'Cảm ơn anh/chị đã tin tưởng Mercy Tech.\n\nBên em áp dụng lộ trình thanh toán 70/30 cho anh/chị:\n\nĐợt 1 — 70% trước khi setup (4.200.000đ):\n- Ngân hàng: Vietcombank\n- STK: 1072128668\n- Tên: CONG TY TNHH CONG NGHE MERCY\n- Nội dung CK: SETUP70 [TÊN KHÁCH]\n\nĐợt 2 — 30% sau khi go-live (1.800.000đ):\n- Cùng thông tin trên\n- Nội dung CK: SETUP30 [TÊN KHÁCH]\n\nAnh/chị chuyển đợt 1 xong chụp màn hình gửi em nha, em nhận được là bắt tay vào setup liền.')">📋 Copy tin nhắn</button>
+      <button class="copy-btn" onclick="copyText(this, 'Cảm ơn anh/chị đã tin tưởng Mercy Tech.\n\nBên em áp dụng lộ trình thanh toán 70/30 cho anh/chị:\n\nĐợt 1 — 70% trước khi setup (7.000.000đ):\n- Ngân hàng: Vietcombank\n- STK: 1072128668\n- Tên: CONG TY TNHH CONG NGHE MERCY\n- Nội dung CK: SETUP70 [TÊN KHÁCH]\n\nĐợt 2 — 30% sau khi go-live (3.000.000đ):\n- Cùng thông tin trên\n- Nội dung CK: SETUP30 [TÊN KHÁCH]\n\nAnh/chị chuyển đợt 1 xong chụp màn hình gửi em nha, em nhận được là bắt tay vào setup liền.')">📋 Copy tin nhắn</button>
     </div>
 
   </div>
@@ -1820,6 +2122,155 @@ Có gì anh/chị nhắn em nha! 😊</div>
   </div>
 </div>
 
+<!-- PSYCHOLOGY -->
+<div id="page-psychology" class="page">
+  <div class="page-header">
+    <div class="page-icon">🧠</div>
+    <h2>Tâm Lý Khách Hàng</h2>
+    <p>Hiểu khách nghĩ gì → bán đúng thứ họ cần nghe</p>
+  </div>
+  <div class="page-body">
+
+    <div class="section-title">💡 Insight Cốt Lõi — Từ Anh Trúc Anh</div>
+    <div class="info-box danger">
+      <div class="ib-icon">🔥</div>
+      <div><b>Chủ DN sợ MẤT TIỀN hơn sợ không kiếm được tiền.</b><br>Không làm gì cũng mất tiền mỗi ngày vì sai số do con người. Đây là nỗi đau lớn nhất — khai thác nó.</div>
+    </div>
+
+    <div class="section-title">🎯 6 Nguyên Tắc Thuyết Phục</div>
+    <div style="display:grid;gap:10px;margin:12px 0;">
+      <div style="background:#fff;border-radius:14px;padding:16px;box-shadow:0 1px 3px rgba(0,0,0,0.07);display:flex;gap:14px;align-items:flex-start;">
+        <div style="width:36px;height:36px;background:#007AFF;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;color:white;font-weight:900;">1</div>
+        <div><div style="font-size:14px;font-weight:700;color:#1C1C1E;">Social Proof — Bằng chứng xã hội</div><div style="font-size:12.5px;color:#6C6C70;margin-top:4px;line-height:1.6;">"Anh Hải bán hải sản Q7 dùng 2 tuần tiết kiệm 30 phút/ngày ghi chép." Luôn có sẵn 2-3 case study thật để kể.</div></div>
+      </div>
+      <div style="background:#fff;border-radius:14px;padding:16px;box-shadow:0 1px 3px rgba(0,0,0,0.07);display:flex;gap:14px;align-items:flex-start;">
+        <div style="width:36px;height:36px;background:#FF9500;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;color:white;font-weight:900;">2</div>
+        <div><div style="font-size:14px;font-weight:700;color:#1C1C1E;">Scarcity — Khan hiếm</div><div style="font-size:12.5px;color:#6C6C70;margin-top:4px;line-height:1.6;">"Quà tặng trị giá 5 triệu chỉ áp dụng đến hết tuần này." Tạo deadline thật — không bluff.</div></div>
+      </div>
+      <div style="background:#fff;border-radius:14px;padding:16px;box-shadow:0 1px 3px rgba(0,0,0,0.07);display:flex;gap:14px;align-items:flex-start;">
+        <div style="width:36px;height:36px;background:#34C759;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;color:white;font-weight:900;">3</div>
+        <div><div style="font-size:14px;font-weight:700;color:#1C1C1E;">Authority — Uy tín chuyên gia</div><div style="font-size:12.5px;color:#6C6C70;margin-top:4px;line-height:1.6;">"Mercy Tech đã setup cho 50+ cửa hàng ngành F&B và bán sỉ." Nói số cụ thể, không nói "nhiều khách".</div></div>
+      </div>
+      <div style="background:#fff;border-radius:14px;padding:16px;box-shadow:0 1px 3px rgba(0,0,0,0.07);display:flex;gap:14px;align-items:flex-start;">
+        <div style="width:36px;height:36px;background:#FF3B30;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;color:white;font-weight:900;">4</div>
+        <div><div style="font-size:14px;font-weight:700;color:#1C1C1E;">Reciprocity — Cho trước nhận sau</div><div style="font-size:12.5px;color:#6C6C70;margin-top:4px;line-height:1.6;">"Em gửi anh/chị video demo miễn phí trước." Cho giá trị trước → khách cảm thấy nợ → dễ chốt hơn.</div></div>
+      </div>
+      <div style="background:#fff;border-radius:14px;padding:16px;box-shadow:0 1px 3px rgba(0,0,0,0.07);display:flex;gap:14px;align-items:flex-start;">
+        <div style="width:36px;height:36px;background:#8B5CF6;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;color:white;font-weight:900;">5</div>
+        <div><div style="font-size:14px;font-weight:700;color:#1C1C1E;">Commitment — Micro-yes</div><div style="font-size:12.5px;color:#6C6C70;margin-top:4px;line-height:1.6;">"Anh/chị thấy tính năng nào phù hợp nhất?" Hỏi câu nhỏ trước → khách gật đầu nhiều lần → dễ gật nốt lúc chốt.</div></div>
+      </div>
+      <div style="background:#fff;border-radius:14px;padding:16px;box-shadow:0 1px 3px rgba(0,0,0,0.07);display:flex;gap:14px;align-items:flex-start;">
+        <div style="width:36px;height:36px;background:#1C1C1E;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;color:white;font-weight:900;">6</div>
+        <div><div style="font-size:14px;font-weight:700;color:#1C1C1E;">Liking — Tạo thiện cảm</div><div style="font-size:12.5px;color:#6C6C70;margin-top:4px;line-height:1.6;">Gọi tên, nhắc ngành nghề cụ thể, tỏ ra hiểu vấn đề. "Em hiểu, ngành F&B quản lý NVL mệt lắm..."</div></div>
+      </div>
+    </div>
+
+    <div class="section-title">🪤 Chiến Lược Chim Mồi (Decoy Pricing)</div>
+    <div class="info-box warn">
+      <div class="ib-icon">⚠️</div>
+      <div><b>TUYỆT ĐỐI KHÔNG BÁO GIÁ THẲNG 10 TRIỆU.</b><br>Báo giá <b>12-15 triệu</b> → rồi đưa khách 2 lựa chọn. Khách sẽ luôn chọn option có lợi hơn — và cả 2 option đều có lợi cho mình.</div>
+    </div>
+    <div class="sop-flow">
+      <div class="flow-title">HIỆU ỨNG CHIM MỒI — 2 OPTION</div>
+      <div class="flow-nodes">
+        <div class="flow-node warning"><div class="node-icon">💰</div><div class="node-body"><div class="node-title">Báo giá niêm yết: 12.000.000đ</div><div class="node-sub">"Giá setup chuẩn của bên em là 12 triệu cho gói đầy đủ."</div></div></div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-branch">
+          <div class="flow-node highlight"><div class="node-icon">🏷️</div><div class="node-body"><div class="node-title">Option 1 — Giảm giá 15%</div><div class="node-sub">Còn <b>10.000.000đ</b>. Thanh toán 70/30. Không quà tặng.</div></div><div class="badge">GIÁ TỐT</div></div>
+          <div class="flow-node success"><div class="node-icon">🎁</div><div class="node-body"><div class="node-title">Option 2 — Giữ giá + Quà 5tr</div><div class="node-sub">Giá <b>12.000.000đ</b> nhưng tặng Bot Báo Cáo + SOP + 1 tháng support.</div></div><div class="badge green">UPSELL</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="info-box tip">
+      <div class="ib-icon">💡</div>
+      <div><b>90% khách chọn Option 2</b> vì cảm giác "được nhiều hơn". Thực tế chi phí quà tặng của mình rất thấp (build 1 lần, dùng cho nhiều khách). Win-win.</div>
+    </div>
+
+    <div class="section-title">📊 Chi Phí Ẩn — Vũ Khí Pitch Chủ DN</div>
+    <table class="role-table">
+      <tr><th>Chi phí hiện tại</th><th>Số tiền/tháng</th><th>Ghi chú</th></tr>
+      <tr><td>NV nhập liệu</td><td><b>5-6 triệu</b></td><td>Ghi sổ, Excel, nhập POS</td></tr>
+      <tr><td>Quản lý giám sát (ca trưởng)</td><td><b>8 triệu</b></td><td>Chỉ để kiểm tra NV nhập đúng</td></tr>
+      <tr><td>Sai số → thất thoát</td><td><b>1-3 triệu</b></td><td>Hụt NVL, lệch tồn kho</td></tr>
+      <tr><td>Đào tạo NV mới</td><td><b>10+ triệu/lần</b></td><td>1-2 tháng để nhớ hết SKU</td></tr>
+      <tr style="background:#FFEBEB;"><td><b>TỔNG</b></td><td><b>14-17 triệu/tháng</b></td><td>So với Bot: 300K/tháng</td></tr>
+    </table>
+
+  </div>
+</div>
+
+<!-- SCENARIOS -->
+<div id="page-scenarios" class="page">
+  <div class="page-header">
+    <div class="page-icon">🎭</div>
+    <h2>Kịch Bản Đóng Vai</h2>
+    <p>5 tình huống thực tế — mở ra là biết nói gì, xử lý sao</p>
+  </div>
+  <div class="page-body">
+
+    <div class="section-title">🍜 Kịch Bản 1 — Chị Lan, Chủ Quán Cơm (Cold Call)</div>
+    <div style="background:#FFF8EB;border-radius:12px;padding:14px 16px;margin:12px 0;font-size:12.5px;line-height:1.6;border-left:3px solid #FF9500;">
+      <b>Persona:</b> Nữ, 35t, bán cơm VP Q.Bình Thạnh, 3 NV, ghi sổ tay<br>
+      <b>Nỗi đau:</b> NV quên ghi hàng, cuối tháng lệch kho, không biết lãi lỗ<br>
+      <b>Tâm lý:</b> Ngại công nghệ, sợ phức tạp, nhạy giá
+    </div>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-dot">1</div><div class="tl-content"><div class="tl-label">Mở đầu — Xin 2 phút</div><div class="tl-msg">"Chào chị Lan, em là [Tên] từ Mercy Tech. Em đang hỗ trợ mấy chị bán cơm, quán ăn quản lý kho nguyên liệu tự động. Em xin chị 2 phút được không ạ?"</div></div></div>
+      <div class="tl-item"><div class="tl-dot yellow">2</div><div class="tl-content"><div class="tl-label">Discovery — Câu 3 (Key)</div><div class="tl-msg">"Chị ơi, mỗi ngày chị nhập bao nhiêu loại nguyên liệu? Ai là người ghi chép vậy ạ? Có hay bị mất hàng hay lệch tồn kho không?"</div><div class="tl-text">→ Chị Lan: "Ôi nhiều lắm, nhân viên hay quên ghi lắm. Cuối tháng kiểm kho toàn thiếu."</div></div></div>
+      <div class="tl-item"><div class="tl-dot red">3</div><div class="tl-content"><div class="tl-label">Chạm nỗi đau — "Lời ảo, Lỗ thật"</div><div class="tl-msg">"Em hiểu chị. Nhiều chị bán cơm nói giống y vậy — ngày nào cũng thấy tiền vô két, nhưng cuối tháng kiểm kho thấy hụt nguyên liệu. Bán thì bán, nhưng lãi đâu không biết."</div></div></div>
+      <div class="tl-item"><div class="tl-dot green">4</div><div class="tl-content"><div class="tl-label">Giải pháp — Đơn giản hóa</div><div class="tl-msg">"Bot của em đơn giản lắm chị. Nhân viên chỉ cần nhắn tin trên Telegram kiểu 'nhập 5kg thịt bò' là bot tự ghi vào bảng. Không cần viết tay, không cần mở Excel. Sáng hôm sau bot tự gửi báo cáo tồn kho cho chị."</div></div></div>
+      <div class="tl-item"><div class="tl-dot">5</div><div class="tl-content"><div class="tl-label">Chốt — Dùng Micro-yes</div><div class="tl-msg">"Chị thấy phần báo cáo tồn kho tự động hay phần NV nhắn tin thay vì ghi tay — cái nào chị quan tâm hơn ạ?" → Chờ chị chọn → "Dạ hay quá, em gửi chị video demo 2 phút xem thử nha?"</div></div></div>
+    </div>
+
+    <div class="section-title">🏗️ Kịch Bản 2 — Anh Minh, Kho VLXD (Referral)</div>
+    <div style="background:#EBF4FF;border-radius:12px;padding:14px 16px;margin:12px 0;font-size:12.5px;line-height:1.6;border-left:3px solid #007AFF;">
+      <b>Persona:</b> Nam, 42t, kho vật liệu Bình Dương, 200+ SKU, dùng Excel<br>
+      <b>Nỗi đau:</b> Tồn kho lệch, thủ kho ghi sai, Excel không real-time<br>
+      <b>Tâm lý:</b> Đã có referral trust, muốn giải pháp nhanh, quan tâm ROI
+    </div>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-dot">1</div><div class="tl-content"><div class="tl-label">Mở đầu — Leverage referral</div><div class="tl-msg">"Chào anh Minh, em là [Tên] từ Mercy Tech. Anh Tuấn bên [tên công ty] giới thiệu anh cho em — anh ấy đang dùng bot kho của em, nói anh cũng đang cần."</div></div></div>
+      <div class="tl-item"><div class="tl-dot yellow">2</div><div class="tl-content"><div class="tl-label">Discovery nhanh — Vì đã có trust</div><div class="tl-msg">"Anh đang quản lý kho VLXD bằng Excel đúng không ạ? Có mấy người dùng file đó? Hay bị trường hợp 2 người sửa cùng lúc không?"</div><div class="tl-text">→ Anh Minh: "Ừ, 3 người dùng chung 1 file, hay bị đè nhau lắm."</div></div></div>
+      <div class="tl-item"><div class="tl-dot green">3</div><div class="tl-content"><div class="tl-label">Pitch ROI — Nói bằng số</div><div class="tl-msg">"Anh thuê thủ kho 5-6 triệu/tháng chỉ để ghi excel. Bot em 300K/tháng, thủ kho chỉ cần nhắn tin là xong. Tiết kiệm ít nhất 5 triệu/tháng. Setup xong 3 ngày là dùng được."</div></div></div>
+      <div class="tl-item"><div class="tl-dot">4</div><div class="tl-content"><div class="tl-label">Chốt nhanh — Vì referral</div><div class="tl-msg">"Anh Tuấn dùng 2 tuần rồi, anh hỏi ảnh feedback thử. Em setup cho anh luôn trong tuần này được không ạ?"</div><div class="tl-text">→ Kết quả: Chốt ngay lần đầu nhờ referral trust.</div></div></div>
+    </div>
+
+    <div class="section-title">🏪 Kịch Bản 3 — Chị Hà, Tạp Hóa Lớn (Facebook Ads)</div>
+    <div style="background:#EBFAF0;border-radius:12px;padding:14px 16px;margin:12px 0;font-size:12.5px;line-height:1.6;border-left:3px solid #34C759;">
+      <b>Persona:</b> Nữ, 50t, tạp hóa Gò Vấp, 300+ SKU, ghi tay<br>
+      <b>Nỗi đau:</b> Hết hàng không biết, NV bán mà không ghi, thất thoát<br>
+      <b>Tâm lý:</b> So sánh ("KiotViet có rẻ hơn không?"), cần social proof
+    </div>
+    <div class="objection-grid">
+      <div class="obj-card">
+        <div class="obj-q">"KiotViet có 200K/tháng thôi, sao mấy em đắt vậy?"</div>
+        <div class="obj-a"><b>Cách xử lý:</b><br>"Dạ KiotViet là phần mềm POS quản lý bán hàng, còn bot em là quản lý KHO — nhập/xuất/tồn. Hai cái bổ sung nhau chị ạ. Chị dùng KiotViet bán hàng, bot em quản lý hàng trong kho. Không thay thế, mà bổ trợ."<br><br><em>→ Tâm lý: Không phủ nhận đối thủ, positioning khác biệt.</em></div>
+      </div>
+    </div>
+
+    <div class="section-title">👻 Kịch Bản 5 — Khách Ghost (Im Lặng 7 Ngày)</div>
+    <div style="background:#FFEBEB;border-radius:12px;padding:14px 16px;margin:12px 0;font-size:12.5px;line-height:1.6;border-left:3px solid #FF3B30;">
+      <b>Tâm lý thật:</b> Chưa đủ trust, sợ mất tiền, chưa thấy urgency<br>
+      <b>Chiến thuật:</b> Follow-up D+1/3/7 theo sequence, không spam
+    </div>
+    <div class="sop-flow">
+      <div class="flow-title">WIN-BACK SEQUENCE</div>
+      <div class="flow-nodes">
+        <div class="flow-node"><div class="node-icon">🎥</div><div class="node-body"><div class="node-title">D+0: Gửi video demo 2 phút</div><div class="node-sub">Hình ảnh thuyết phục hơn chữ</div></div><div class="badge">D+0</div></div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-node"><div class="node-icon">💬</div><div class="node-body"><div class="node-title">D+1: Hỏi thêm pain point</div><div class="node-sub">"Anh/chị đang quản lý kho bằng gì ạ?"</div></div><div class="badge">D+1</div></div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-node"><div class="node-icon">🌟</div><div class="node-body"><div class="node-title">D+3: Social proof</div><div class="node-sub">Screenshot feedback khách cùng ngành</div></div><div class="badge">D+3</div></div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-node warning"><div class="node-icon">🔔</div><div class="node-body"><div class="node-title">D+7: Deadline quà tặng</div><div class="node-sub">"Quà 5tr hết hạn cuối tuần này"</div></div><div class="badge yellow">D+7</div></div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-node danger"><div class="node-icon">📦</div><div class="node-body"><div class="node-title">D+30: Win-back nhẹ nhàng</div><div class="node-sub">Hỏi thăm, không bán. 30% quay lại.</div></div><div class="badge red">D+30</div></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 <!-- Q&A -->
 <div id="page-qa" class="page">
   <div class="page-header">
@@ -1944,44 +2395,70 @@ Có gì anh/chị nhắn em nha! 😊</div>
     <div class="objection-grid">
 
       <div class="obj-card">
-        <div class="obj-q">"Setup 6 triệu đắt quá, sao không rẻ hơn?"</div>
+        <div class="obj-q">"Đắt quá! Bên kia có 3 triệu thôi!"</div>
         <div class="obj-a">
-          <em>"Dạ anh/chị ơi, giá gốc của dịch vụ này là 12 triệu, hiện em đang có chương trình đặc biệt giảm 50% còn 6 triệu thôi ạ. Thời gian khuyến mãi có hạn. Đổi lại anh/chị có một bộ công cụ quản lý kho chuyên nghiệp chạy 24/7. Phí duy trì 300k/tháng tương đương 1 ly cà phê mỗi ngày. Anh/chị thử 7 ngày, không hài lòng hoàn tiền 100% cùng ạ!"</em>
+          <em>"Dạ em hiểu. Giá 3 triệu thường là phần mềm bán hàng (POS), không phải bot quản lý kho. Hai cái khác nhau hoàn toàn. Bot em xử lý phần NHẬP-XUẤT-TỒN tự động — chụp ảnh phiếu là bot ghi vào bảng, sáng hôm sau bot gửi báo cáo tồn kho. POS không làm được việc này.
+          <br><br>Mà anh/chị tính: thuê 1 NV nhập liệu 5-6 triệu/tháng, bot em 300K/tháng — tiết kiệm 5 triệu mỗi tháng, hoàn vốn trong 2 tháng."</em>
+        </div>
+      </div>
+
+      <div class="obj-card">
+        <div class="obj-q">"Nhân viên tôi lười dùng / sợ mất việc"</div>
+        <div class="obj-a">
+          <em>"Dạ em hiểu. Nhưng bot này giúp NV làm NHANH hơn — từ 8 tiếng ghi chép còn 2 tiếng. NV được nhẹ việc chứ không mất việc.
+          <br><br>Còn nếu NV không chịu làm theo quy trình mới — thì đó là vấn đề kỷ luật, không phải vấn đề công nghệ. Anh/chị là chủ, anh/chị quyết định quy trình, NV phải theo. Có bot, anh/chị nắm toàn quyền kiểm soát."</em>
+        </div>
+      </div>
+
+      <div class="obj-card">
+        <div class="obj-q">"Cho dùng thử miễn phí vào form của tôi đi"</div>
+        <div class="obj-a">
+          <em>"Dạ em có bot demo sẵn để anh/chị trải nghiệm luồng hoạt động — chị gửi ảnh phiếu mẫu, bot chạy ra Excel cho chị xem luôn.
+          <br><br>Còn setup custom theo đúng form của anh/chị thì cần thời gian + chi phí kỹ thuật, nên em chỉ làm sau khi chốt hợp đồng ạ. Giống như xây nhà — xem nhà mẫu miễn phí, nhưng xây riêng thì có phí."</em>
+        </div>
+      </div>
+
+      <div class="obj-card">
+        <div class="obj-q">"Sợ mua xong bị bỏ rơi"</div>
+        <div class="obj-a">
+          <em>"Dạ em hiểu lo lắng của anh/chị. Bên em bàn giao cực kỹ: tài khoản VPS, Chatbot, hướng dẫn sử dụng đầy đủ — anh/chị sở hữu 100%.
+          <br><br>Bảo hành trọn đời cho các tác vụ cơ bản. Mỗi tháng em chỉ cần 15-20 phút kiểm tra duy trì. Có gì hỏi em qua Zalo 24/7."</em>
+        </div>
+      </div>
+
+      <div class="obj-card">
+        <div class="obj-q">"Để tôi nghĩ thêm / hỏi vợ-chồng / bàn với partner"</div>
+        <div class="obj-a">
+          <em>"Dạ hoàn toàn hợp lý ạ! Em gửi anh/chị video demo 2 phút + bảng tính ROI để anh/chị chia sẻ với gia đình/partner cho trực quan.
+          <br><br>Anh/chị cho em biết khoảng bao giờ có kết quả — em sẽ follow-up đúng lúc chứ không spam ạ."</em>
+          <br><br><b>→ Ghi note: Follow D+3</b>
         </div>
       </div>
 
       <div class="obj-card">
         <div class="obj-q">"Tôi đang dùng Excel rồi, không cần bot."</div>
         <div class="obj-a">
-          <em>"Dạ Excel tốt ạ, nhưng Excel cần ai đó ngồi cập nhật thủ công — khi bận thì bỏ sót, nhân viên nghỉ thì không ai cập nhật. Bot em thì nhân viên chỉ nhắn tin trong Telegram là tự ghi vào Sheet ngay — nhanh hơn, ít sai sót hơn. Anh/chị thử 7 ngày xem chênh lệch thế nào ạ?"</em>
+          <em>"Dạ Excel tốt ạ. Nhưng mấy người dùng chung file? Có hay bị đè nhau không? NV bận thì quên cập nhật, nghỉ thì không ai nhập.
+          <br><br>Bot em thì NV nhắn tin là xong — data vào Sheet real-time, mấy người xem cùng lúc, không bao giờ đè nhau. Anh/chị thử xem 1 tuần chênh lệch thế nào ạ?"</em>
         </div>
       </div>
 
       <div class="obj-card">
-        <div class="obj-q">"Để tôi nghĩ thêm / hỏi vợ / bàn với đối tác."</div>
+        <div class="obj-q">"Nhân viên ít tiếp xúc công nghệ, học không được"</div>
         <div class="obj-a">
-          <em>"Dạ hoàn toàn hợp lý ạ! Để em gửi thêm 1 video demo ngắn 2 phút cho anh/chị xem với gia đình/đối tác cho trực quan. Thường mọi người xem xong là tự hiểu ngay. Em gửi qua Zalo nhé?"</em>
+          <em>"Dạ NV chỉ cần biết nhắn tin Zalo là dùng được — vì Telegram giao diện y như Zalo. Em hướng dẫn NV cài 2 phút, có video hướng dẫn.
+          <br><br>Sau setup em vào nhóm hướng dẫn trực tiếp cho cả NV. 1 tuần không học được em hoàn tiền ạ!"</em>
         </div>
       </div>
 
       <div class="obj-card">
-        <div class="obj-q">"Nhân viên tôi ít tiếp xúc công nghệ, học không được."</div>
+        <div class="obj-q">"Sao không dùng Zalo mà dùng Telegram?"</div>
         <div class="obj-a">
-          <em>"Dạ em hiểu ạ! Thực ra nhân viên chỉ cần biết nhắn Zalo là dùng được — vì bot dùng Telegram, interface y chang Zalo. Em còn vào nhóm hướng dẫn trực tiếp cho cả nhân viên sau khi setup. Anh/chị thử 7 ngày, nhân viên không học được em hoàn tiền ạ!"</em>
-        </div>
-      </div>
-
-      <div class="obj-card">
-        <div class="obj-q">"Sao không dùng app kho có sẵn trên store?"</div>
-        <div class="obj-a">
-          <em>"Dạ app kho trên store thường cần nhân viên tự mở app, đăng nhập, thao tác nhiều bước — hay bị bỏ quên. Bot Telegram của em thì nhân viên đã xài Telegram rồi, chỉ cần nhắn vào nhóm — không cần thêm app, không cần đăng nhập thêm. Kết quả ghi vào Sheet mà anh/chị xem từ đâu cũng được ạ."</em>
-        </div>
-      </div>
-
-      <div class="obj-card">
-        <div class="obj-q">"Tôi không có Telegram."</div>
-        <div class="obj-a">
-          <em>"Dạ không sao ạ! Cài Telegram miễn phí, 2 phút là xong. Em hướng dẫn cài luôn cho anh/chị và nhân viên nha — rất đơn giản, y như cài Zalo ạ."</em>
+          <em>"Dạ em chọn Telegram vì 3 lý do:
+          <br>1. Zalo hay quét bot → bot bị khóa bất cứ lúc nào, khách mất dữ liệu.
+          <br>2. Telegram cho bot hoạt động 24/7 ổn định, không bị giới hạn.
+          <br>3. Cài Telegram 2 phút, giao diện y như Zalo thôi ạ.
+          <br><br>Em hướng dẫn NV cài ngay trong 2 phút, có video hướng dẫn luôn."</em>
         </div>
       </div>
 
@@ -2148,7 +2625,7 @@ Anh/chị gửi lại em, em setup trong hôm nay luôn ạ! ⚡😊</div>
 ═══════════════════════════════════════════
 
 📅 Ngày:  ____/____/2026     👤 Sale: ________________
-💰 Đã thu tiền:  □ Chưa   □ Rồi (6.000.000đ, ngày __/____)
+💰 Đã thu tiền:  □ Chưa   □ Rồi (10.000.000đ, ngày __/____)
 
 ──── THÔNG TIN KHÁCH ──────────────────────
 
@@ -2226,16 +2703,15 @@ Cảm ơn anh/chị.</div>
   </div>
   <div class="page-body">
 
-    <div class="section-title">💰 Gói Cơ Bản</div>
+    <div class="section-title">💰 Gói Chính Thức</div>
     <div class="price-grid">
       <div class="price-card featured">
         <div class="pc-label">PHÍ SETUP</div>
-        <div style="text-decoration:line-through;opacity:0.4;font-size:14px;font-weight:700;margin-bottom:2px">12.000.000đ</div>
-        <div class="pc-price">6 TRIỆU</div>
-        <div class="pc-unit">Thanh toán 70/30 • Giảm 50%</div>
+        <div class="pc-price">10 TRIỆU</div>
+        <div class="pc-unit">Thanh toán 70/30</div>
         <div class="pc-desc">
-          <b>70% trước:</b> 4.200.000đ → bắt đầu setup<br>
-          <b>30% sau go-live:</b> 1.800.000đ → khi khách hài lòng<br><br>
+          <b>70% trước:</b> 7.000.000đ → bắt đầu setup<br>
+          <b>30% sau go-live:</b> 3.000.000đ → khi khách hài lòng<br><br>
           Tạo bot Telegram riêng • Setup Google Sheet • Nhập danh mục hàng • Demo + HDSD • Hỗ trợ 7 ngày đầu
         </div>
       </div>
@@ -2244,6 +2720,30 @@ Cảm ơn anh/chị.</div>
         <div class="pc-price">300K</div>
         <div class="pc-unit">mỗi tháng</div>
         <div class="pc-desc">Server chạy 24/7 • Bảo trì kỹ thuật • Hỗ trợ qua Zalo/Telegram • Thêm/sửa mặt hàng miễn phí</div>
+      </div>
+    </div>
+
+    <div class="section-title">🎁 Quà Tặng Kèm (Trị Giá 5 Triệu)</div>
+    <div style="display:grid;gap:12px;margin:12px 0;">
+      <div style="background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.08);border:1.5px solid #34C759;">
+        <div style="background:#34C759;color:white;padding:10px 16px;font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;">TẶNG MIỄN PHÍ KHI SETUP</div>
+        <div style="padding:4px 0;">
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:14px 16px;border-bottom:0.5px solid #F2F2F7;">
+            <div style="width:36px;height:36px;background:#EBFAF0;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">📊</div>
+            <div><div style="font-size:14px;font-weight:700;color:#1C1C1E;">Bot Báo Cáo Tồn Kho Tự Động</div><div style="font-size:12.5px;color:#6C6C70;margin-top:3px;line-height:1.5;">Mỗi sáng bot tự gửi báo cáo tồn kho vào Telegram. Biết ngay hàng nào sắp hết, hàng nào tồn nhiều — không cần mở Sheet.<br><b>Giá trị:</b> 2.000.000đ</div></div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:14px 16px;border-bottom:0.5px solid #F2F2F7;">
+            <div style="width:36px;height:36px;background:#EBF4FF;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">📋</div>
+            <div><div style="font-size:14px;font-weight:700;color:#1C1C1E;">Bộ SOP Vận Hành Cửa Hàng</div><div style="font-size:12.5px;color:#6C6C70;margin-top:3px;line-height:1.5;">Quy trình nhập/xuất kho, kiểm kê cuối ngày, đối soát hàng hóa — chuẩn hóa bài bản cho nhân viên.<br><b>Giá trị:</b> 1.500.000đ</div></div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:14px 16px;border-bottom:0.5px solid #F2F2F7;">
+            <div style="width:36px;height:36px;background:#FFF8EB;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">🎓</div>
+            <div><div style="font-size:14px;font-weight:700;color:#1C1C1E;">1 Tháng Support Miễn Phí</div><div style="font-size:12.5px;color:#6C6C70;margin-top:3px;line-height:1.5;">Hỗ trợ kỹ thuật không giới hạn trong 30 ngày đầu. Phản hồi trong 30 phút.<br><b>Giá trị:</b> 1.500.000đ</div></div>
+          </div>
+          <div style="padding:12px 16px;background:#EBFAF0;text-align:center;">
+            <div style="font-size:13px;font-weight:800;color:#166534;">TỔNG GIÁ TRỊ QUÀ TẶNG: 5.000.000đ — MIỄN PHÍ</div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -2321,7 +2821,7 @@ Cảm ơn anh/chị.</div>
         • Thuê thêm người ghi sổ: <b>3.000.000đ/tháng</b><br>
         • Sai sót tồn kho gây thiếu hàng: <b>500.000đ – 2.000.000đ/tháng</b><br>
         • <b>Tổng chi phí vấn đề hiện tại: ~3-5 triệu/tháng</b><br><br>
-        Bot Mercy Tech: <b>300.000đ/tháng</b> → <b>Tiết kiệm ít nhất 2.7 triệu/tháng</b>
+        Bot Mercy Tech: <b>10 triệu setup 1 lần + 300.000đ/tháng</b> → <b>Hoàn vốn trong 3-4 tháng</b>, sau đó tiết kiệm ít nhất <b>2.7 triệu/tháng</b>
       </div>
     </div>
 

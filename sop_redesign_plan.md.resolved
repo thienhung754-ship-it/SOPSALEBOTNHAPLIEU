@@ -1,0 +1,140 @@
+# 🔄 Kế Hoạch Redesign SOP Sale — Bot Nhập Liệu Mercy Tech
+
+## ❌ Vấn Đề Hiện Tại
+
+Quy trình cũ:
+```
+Có SĐT → Gọi điện → Pitch luôn → Báo giá 6tr → Thu tiền → Setup
+```
+
+> [!WARNING]
+> **Sai ở chỗ nào?**
+> - Báo giá ngay từ đầu → khách chưa thấy giá trị → từ chối
+> - Không khai thác được nỗi đau cụ thể của từng ngành
+> - Script cứng nhắc, chỉ phù hợp 1 ngành (kho thực phẩm)
+> - Khách cảm giác bị "bán hàng" chứ không phải được "tư vấn"
+
+---
+
+## ✅ Quy Trình Mới Đề Xuất — 7 Bước
+
+### Tổng quan Flow mới:
+
+```
+Bước 1: TIẾP NHẬN        → Khách liên hệ / mình outreach
+Bước 2: KHAI THÁC NỖI ĐAU → Hỏi đúng câu, hiểu đúng ngành, tìm đúng đau
+Bước 3: CHẨN ĐOÁN         → Match nỗi đau → giải pháp bot cụ thể
+Bước 4: DEMO              → Demo đúng thứ khách cần thấy (không demo chung chung)
+Bước 5: BÁO GIÁ           → Giá theo gói, linh hoạt theo quy mô
+Bước 6: CHỐT & THU TIỀN   → Thanh toán + triển khai
+Bước 7: ONBOARDING        → Setup + Follow-up + Upsell
+```
+
+---
+
+## 📋 Chi Tiết Từng Bước
+
+### Bước 1 — Tiếp Nhận (giữ đơn giản)
+- Khách đến từ đâu: referral, ads, cold outreach
+- Ghi nhận thông tin cơ bản: Tên, ngành, quy mô
+
+### Bước 2 — ⭐ KHAI THÁC NỖI ĐAU (phần quan trọng nhất)
+
+> [!IMPORTANT]  
+> Đây là bước cốt lõi cần làm lại hoàn toàn. Cần có:
+> 1. **Bộ câu hỏi Discovery chung** (áp dụng mọi ngành)
+> 2. **Bộ câu hỏi theo ngành** (F&B, bán lẻ, sản xuất, dịch vụ...)
+> 3. **Cây quyết định** — Từ câu trả lời → xác định nỗi đau chính
+
+#### 🔍 Câu Hỏi Discovery Chung (mọi ngành):
+| # | Câu hỏi | Mục đích |
+|---|---------|----------|
+| 1 | "Anh/chị đang kinh doanh ngành gì, quy mô khoảng bao nhiêu người?" | Xác định ngành + quy mô |
+| 2 | "Hiện tại anh/chị đang quản lý công việc hàng ngày bằng cách nào?" | Hiểu workflow hiện tại |
+| 3 | "Phần nào tốn thời gian nhất trong ngày?" | Tìm pain point #1 |
+| 4 | "Đã từng thử phần mềm/giải pháp gì chưa? Kết quả sao?" | Hiểu kỳ vọng + rào cản |
+| 5 | "Nếu có 1 thứ giải quyết được [pain point], anh/chị sẵn sàng đầu tư bao nhiêu?" | Đánh giá ngân sách + mức sẵn sàng |
+
+#### 🏭 Câu Hỏi Theo Ngành:
+
+**F&B / Nhà hàng / Quán ăn:**
+- Mỗi ngày nhập bao nhiêu loại nguyên liệu?
+- Ai là người ghi chép? Bao nhiêu người cần nhập?
+- Có hay bị mất hàng / lệch tồn kho không?
+- Đang dùng sổ tay hay Excel?
+
+**Bán lẻ / Cửa hàng:**
+- Bao nhiêu SKU trong kho?
+- Có bao nhiêu chi nhánh?
+- Đang dùng POS nào? Có tích hợp quản lý kho không?
+- Hay bị hết hàng mà không biết?
+
+**Sản xuất / Xưởng:**
+- Quy trình nhập nguyên liệu → ra thành phẩm thế nào?
+- Có cần theo dõi batch/lô không?
+- Bao nhiêu công đoạn cần ghi nhận?
+
+**Dịch vụ / Khác:**
+- Loại dữ liệu nào cần nhập hàng ngày?
+- Bao nhiêu người cần nhập?
+- Dữ liệu đang nằm ở đâu (giấy, Excel, đâu đó)?
+
+### Bước 3 — Chẩn Đoán & Match Giải Pháp
+- Từ nỗi đau → map vào tính năng bot cụ thể
+- Không nói "bot làm được 20 thứ", chỉ nói đúng 2-3 thứ khách đang đau
+
+### Bước 4 — Demo Cá Nhân Hóa
+- Demo đúng use case của khách
+- Dùng tên sản phẩm/hàng hóa của khách trong demo
+
+### Bước 5 — 💰 Bảng Giá Mới
+
+> [!NOTE]
+> Cần anh confirm cấu trúc giá mới. Đề xuất:
+
+| Gói | Phù hợp | Setup | Hàng tháng | Đặc điểm |
+|-----|---------|-------|------------|----------|
+| **Starter** | 1 người dùng, < 20 SKU | ? | ? | Bot cơ bản |
+| **Growth** | 2-5 người, < 100 SKU | ? | ? | + Báo cáo tự động |
+| **Pro** | 5+ người, đa chi nhánh | ? | ? | + Tùy chỉnh + API |
+| **Enterprise** | Custom | Báo giá riêng | Báo giá riêng | Full custom |
+
+### Bước 6 — Chốt & Thu Tiền
+- Giữ nguyên quy tắc 70/30 (hoặc cập nhật?)
+- Thanh toán qua chuyển khoản
+
+### Bước 7 — Onboarding & Follow-up
+- Setup kỹ thuật
+- Training khách
+- Follow-up D+1, D+3, D+7
+
+---
+
+## 🎯 Câu Hỏi Cần Anh Confirm
+
+1. **Bộ câu hỏi Discovery**: Anh muốn thêm/bớt/sửa câu nào?
+2. **Danh sách ngành**: Ngoài F&B, Bán lẻ, Sản xuất, Dịch vụ — còn ngành nào cần cover?
+3. **Bảng giá mới**: Anh muốn chia gói kiểu gì? Giá cụ thể bao nhiêu?
+4. **Quy tắc thanh toán**: Vẫn 70/30 hay thay đổi?
+5. **Thương hiệu**: Vẫn "Mercy Tech" hay có tên mới?
+6. **Có muốn thêm phần Case Study** theo từng ngành không?
+
+---
+
+## 🛠️ Phạm Vi Chỉnh Sửa Code
+
+| Trang | Thay đổi |
+|-------|----------|
+| **Trang Chủ** | Cập nhật menu mới |
+| **Sơ Đồ Tổng Quan** | Flow 7 bước mới |
+| **Bước 1** | Giữ nhẹ — tiếp nhận lead |
+| **Bước 2** ⭐ | **LÀM MỚI HOÀN TOÀN** — Discovery & khai thác nỗi đau |
+| **Bước 3** | **MỚI** — Chẩn đoán & match giải pháp |
+| **Bước 4** | **MỚI** — Demo cá nhân hóa |
+| **Bước 5** | **LÀM MỚI** — Bảng giá theo gói |
+| **Bước 6** | Thu tiền (cập nhật nếu cần) |
+| **Bước 7** | Onboarding + Follow-up |
+| **Q&A** | Cập nhật theo flow mới |
+| **Phản biện** | Cập nhật |
+| **Forms** | Cập nhật form discovery |
+| **Bảng giá** | **LÀM MỚI** |
