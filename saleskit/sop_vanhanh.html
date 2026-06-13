@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>SOP Vận Hành — Bot Nhập Liệu — MERCY TECH</title>
+<style>
+:root{--text:#1d1d1f;--muted:#86868b;--bg:#fff;--card:#f5f5f7;--border:#d2d2d7;--accent:#0071e3;--font:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased}
+.c{max-width:900px;margin:0 auto;padding:0 24px}
+.hero{text-align:center;padding:40px 20px 16px}
+.hero img{height:56px;margin-bottom:10px}
+.hero h1{font-size:32px;font-weight:700;letter-spacing:-0.02em;margin-bottom:4px}
+.hero .sub{font-size:16px;color:var(--muted)}
+.hero .meta{font-size:12px;color:var(--muted);margin-top:6px}
+section{margin-bottom:36px}
+section h2{font-size:22px;font-weight:700;margin-bottom:12px;padding-bottom:5px;border-bottom:2px solid var(--text)}
+h3{font-size:16px;font-weight:600;margin:14px 0 6px;color:#333}
+h4{font-size:14px;font-weight:600;margin:8px 0 4px}
+p{font-size:13px;color:#555;margin-bottom:8px}
+table{width:100%;border-collapse:collapse;margin:8px 0 14px;font-size:12px}
+th{text-align:left;padding:8px 10px;font-size:10px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;border-bottom:2px solid var(--border)}
+td{padding:8px 10px;border-bottom:1px solid #eee;vertical-align:top}
+td:first-child{font-weight:500}
+.r{text-align:right}
+ul,ol{margin:4px 0 10px 16px;font-size:12px}li{margin-bottom:3px}
+.card{background:var(--card);border-radius:14px;padding:18px;margin:10px 0}
+.green{background:#f0fdf4;border:1px solid #86efac;border-radius:12px;padding:16px;font-size:12px;margin:10px 0}
+.yellow{background:#fffbeb;border:1px solid #fbbf24;border-radius:12px;padding:16px;font-size:12px;margin:10px 0}
+.red{background:#fef2f2;border:1px solid #fca5a5;border-radius:12px;padding:16px;font-size:12px;margin:10px 0}
+.timeline{position:relative;padding-left:28px;margin:14px 0}
+.timeline::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:2px;background:var(--border)}
+.step{position:relative;margin-bottom:20px}
+.step::before{content:attr(data-step);position:absolute;left:-28px;width:20px;height:20px;background:var(--accent);color:#fff;border-radius:50%;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.step h4{margin:0 0 4px;font-size:14px}
+.step p{margin:0;font-size:12px;color:#555}
+.step .time{display:inline-block;background:#e8f4fd;color:var(--accent);font-size:10px;font-weight:600;padding:2px 8px;border-radius:99px;margin-top:4px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+footer{text-align:center;padding:20px 0;border-top:1px solid var(--border);margin-top:24px;font-size:11px;color:var(--muted)}
+@media print{section,.card,.timeline{page-break-inside:avoid}h2{page-break-after:avoid}}
+@media(max-width:700px){.grid2{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="c">
+<div class="hero">
+  <img src="logo.png" alt="Bot Nhập Liệu">
+  <h1>SOP Vận Hành</h1>
+  <p class="sub">Quy trình triển khai Bot Nhập Liệu cho khách hàng mới</p>
+  <p class="meta">MERCY TECH | Tài liệu nội bộ — Dành cho Team Vận Hành</p>
+</div>
+
+<!-- TỔNG QUAN -->
+<section>
+<h2>Tổng Quan Quy Trình</h2>
+<p>Thời gian triển khai trung bình: <strong>2-3 ngày làm việc</strong> / 1 bot (1 loại chứng từ)</p>
+<div class="card">
+<table>
+<thead><tr><th>Giai đoạn</th><th>Thời gian</th><th>Người thực hiện</th><th>Output</th></tr></thead>
+<tbody>
+<tr><td>1. Tiếp nhận & Thu thập</td><td>0.5 ngày</td><td>Sale + Vận hành</td><td>Checklist đầu vào hoàn chỉnh</td></tr>
+<tr><td>2. Cấu hình & Build</td><td>1 ngày</td><td>Dev / Intern</td><td>Bot hoạt động trên staging</td></tr>
+<tr><td>3. Test & Tinh chỉnh</td><td>0.5 ngày</td><td>Dev + Khách</td><td>Accuracy >= 95%</td></tr>
+<tr><td>4. Bàn giao & Đào tạo</td><td>0.5 ngày</td><td>Vận hành</td><td>Khách sử dụng độc lập</td></tr>
+<tr><td>5. Hỗ trợ sau bàn giao</td><td>2 tuần</td><td>Vận hành</td><td>Xử lý edge cases</td></tr>
+</tbody></table>
+</div>
+</section>
+
+<!-- GĐ 1 -->
+<section>
+<h2>Giai Đoạn 1: Tiếp Nhận & Thu Thập (0.5 ngày)</h2>
+<h3>Checklist đầu vào từ khách</h3>
+<div class="green">
+<p><strong>Bắt buộc phải có trước khi bắt đầu build:</strong></p>
+<ol>
+<li><strong>Bảng mã tham chiếu:</strong> Danh sách sản phẩm / NCC / mã hàng (Excel hoặc ảnh chụp)</li>
+<li><strong>Mẫu chứng từ:</strong> 5-10 ảnh chụp thật của từng loại chứng từ cần đọc</li>
+<li><strong>Cấu trúc đầu ra:</strong> Mẫu file Excel output mong muốn (các cột, thứ tự)</li>
+<li><strong>Tài khoản Telegram:</strong> Số điện thoại / username để thêm vào group bot</li>
+<li><strong>Phần mềm kế toán:</strong> Đang dùng gì? (MISA / Excel / Google Sheets / khác)</li>
+</ol>
+</div>
+<div class="yellow">
+<strong>Lưu ý:</strong> Nếu khách chưa có bảng mã tham chiếu rõ ràng, cần hỗ trợ khách tạo. Thời gian giai đoạn này có thể kéo dài thêm 1-2 ngày tùy khách.
+</div>
+
+<h3>Bàn giao từ Sale sang Vận Hành</h3>
+<div class="card">
+<p>Sale gửi cho Vận Hành qua group Telegram nội bộ:</p>
+<ul>
+<li>Tên khách hàng + ngành nghề + gói combo đã ký</li>
+<li>File checklist đầu vào (đã thu thập)</li>
+<li>Deadline bàn giao (thường = ngày ký + 3-5 ngày)</li>
+<li>Đặc biệt: yêu cầu nào khác thường? (VD: format riêng, nhiều chi nhánh,...)</li>
+</ul>
+</div>
+</section>
+
+<!-- GĐ 2 -->
+<section>
+<h2>Giai Đoạn 2: Cấu Hình & Build (1 ngày)</h2>
+<div class="timeline">
+<div class="step" data-step="1">
+<h4>Clone bot template</h4>
+<p>Duplicate bot template chuẩn > đặt tên theo mã khách (VD: BOT_HARUSUSHI_001)</p>
+<span class="time">15 phút</span>
+</div>
+<div class="step" data-step="2">
+<h4>Nạp bảng mã tham chiếu</h4>
+<p>Upload danh sách SP/NCC/mã hàng vào database tham chiếu của bot</p>
+<span class="time">30 phút</span>
+</div>
+<div class="step" data-step="3">
+<h4>Config AI prompt</h4>
+<p>Chỉnh prompt đọc OCR phù hợp với format chứng từ của khách. Bao gồm: nhận diện layout, mapping fields, xử lý ngoại lệ</p>
+<span class="time">2-3 giờ</span>
+</div>
+<div class="step" data-step="4">
+<h4>Mapping output format</h4>
+<p>Config cấu trúc file Excel đầu ra theo template khách yêu cầu. Bao gồm: thứ tự cột, format số, công thức tính toán (thuế, chiết khấu,...)</p>
+<span class="time">1-2 giờ</span>
+</div>
+<div class="step" data-step="5">
+<h4>Kết nối Telegram</h4>
+<p>Tạo group Telegram cho khách, thêm bot vào group, set quyền admin cho bot</p>
+<span class="time">15 phút</span>
+</div>
+</div>
+</section>
+
+<!-- GĐ 3 -->
+<section>
+<h2>Giai Đoạn 3: Test & Tinh Chỉnh (0.5 ngày)</h2>
+<div class="grid2">
+<div class="card">
+<h4>Test nội bộ</h4>
+<ul>
+<li>Chạy 10 chứng từ mẫu thật</li>
+<li>Kiểm tra accuracy từng field</li>
+<li>Target: >= 95% chính xác</li>
+<li>Fix các edge cases phổ biến</li>
+</ul>
+</div>
+<div class="card">
+<h4>Test với khách</h4>
+<ul>
+<li>Khách chụp 5 chứng từ thật gửi vào bot</li>
+<li>Review output cùng khách</li>
+<li>Ghi nhận feedback, chỉnh sửa ngay</li>
+<li>Confirm: khách OK với output</li>
+</ul>
+</div>
+</div>
+<div class="red">
+<strong>Tiêu chuẩn nghiệm thu:</strong> Accuracy >= 95% trên 10 chứng từ thật. Nếu dưới 95%, cần tinh chỉnh thêm trước khi bàn giao.
+</div>
+</section>
+
+<!-- GĐ 4 -->
+<section>
+<h2>Giai Đoạn 4: Bàn Giao & Đào Tạo (0.5 ngày)</h2>
+<div class="card">
+<h3>Nội dung đào tạo (30-45 phút)</h3>
+<ol>
+<li><strong>Cách gửi chứng từ:</strong> Chụp ảnh rõ nét, gửi vào group Telegram</li>
+<li><strong>Quy tắc chụp:</strong> Không nghiêng, đủ sáng, không che chữ, chụp hết phiếu</li>
+<li><strong>Cách nhận output:</strong> Bot gửi lại file Excel trong group / tự lưu vào Google Sheets</li>
+<li><strong>Xử lý lỗi:</strong> Ảnh mờ → bot yêu cầu chụp lại. Sai field → feedback ngay cho team</li>
+<li><strong>Liên hệ hỗ trợ:</strong> Gửi tin nhắn vào group hỗ trợ / gọi hotline</li>
+</ol>
+</div>
+<div class="green">
+<strong>Bàn giao:</strong> Gửi biên bản bàn giao (PDF) + video hướng dẫn ngắn (nếu có). Sale thông báo cho khách đã hoàn tất, thu 50% còn lại.
+</div>
+</section>
+
+<!-- GĐ 5 -->
+<section>
+<h2>Giai Đoạn 5: Hỗ Trợ Sau Bàn Giao (2 tuần)</h2>
+<table>
+<thead><tr><th>Tuần</th><th>Hành động</th><th>Người thực hiện</th></tr></thead>
+<tbody>
+<tr><td>Tuần 1</td><td>Monitor hàng ngày: kiểm tra accuracy, xử lý edge cases mới</td><td>Vận hành</td></tr>
+<tr><td>Tuần 2</td><td>Giảm xuống check 2 ngày/lần. Tinh chỉnh prompt nếu cần</td><td>Vận hành</td></tr>
+<tr><td>Sau tuần 2</td><td>Chuyển sang chế độ bảo trì tháng. Xử lý khi có yêu cầu</td><td>Vận hành</td></tr>
+</tbody></table>
+</section>
+
+<!-- UPSELL -->
+<section>
+<h2>Quy Trình Upsell</h2>
+<div class="card">
+<h3>Thời điểm đề xuất</h3>
+<p>Sau 1-2 tháng sử dụng ổn định, khi khách đã thấy giá trị:</p>
+<ul>
+<li><strong>Thêm loại chứng từ:</strong> "Anh/chị muốn bot đọc thêm phiếu xuất kho không? Chỉ +2tr setup"</li>
+<li><strong>Xuất Nhập Tồn:</strong> "Em có thể nâng cấp lên hệ thống tồn kho realtime, đối soát NCC tự động"</li>
+<li><strong>Báo cáo tự động:</strong> "Cuối ngày bot gửi email tổng hợp, anh/chị không cần mở file"</li>
+<li><strong>Đối soát NCC:</strong> "Bot tự so sánh NCC giao vs đơn đặt → cảnh báo ngay khi chênh lệch"</li>
+</ul>
+</div>
+</section>
+
+<!-- CHECKLIST -->
+<section>
+<h2>Checklist Nhanh — In Ra Dán Bàn</h2>
+<div class="card" style="font-size:13px">
+<table>
+<thead><tr><th></th><th>Hạng mục</th><th>Check</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Nhận bàn giao từ Sale (tên KH, gói, deadline)</td><td style="text-align:center">▢</td></tr>
+<tr><td>2</td><td>Có bảng mã tham chiếu SP/NCC</td><td style="text-align:center">▢</td></tr>
+<tr><td>3</td><td>Có 5-10 mẫu chứng từ thật</td><td style="text-align:center">▢</td></tr>
+<tr><td>4</td><td>Có cấu trúc file output mong muốn</td><td style="text-align:center">▢</td></tr>
+<tr><td>5</td><td>Clone bot + nạp database</td><td style="text-align:center">▢</td></tr>
+<tr><td>6</td><td>Config AI prompt</td><td style="text-align:center">▢</td></tr>
+<tr><td>7</td><td>Mapping output format</td><td style="text-align:center">▢</td></tr>
+<tr><td>8</td><td>Test 10 chứng từ >= 95% accuracy</td><td style="text-align:center">▢</td></tr>
+<tr><td>9</td><td>Test với khách OK</td><td style="text-align:center">▢</td></tr>
+<tr><td>10</td><td>Đào tạo khách (30-45 phút)</td><td style="text-align:center">▢</td></tr>
+<tr><td>11</td><td>Bàn giao + biên bản</td><td style="text-align:center">▢</td></tr>
+<tr><td>12</td><td>Hỗ trợ 2 tuần đầu</td><td style="text-align:center">▢</td></tr>
+</tbody></table>
+</div>
+</section>
+</div>
+<footer>MERCY TECH — Bot Nhập Liệu | Hotline: 0763 068 614 | Mercytechglobal@gmail.com<br>Tài liệu nội bộ — Không chia sẻ cho khách hàng</footer>
+</body>
+</html>

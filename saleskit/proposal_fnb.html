@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Bot Nhập Liệu — Giải Pháp Cho Ngành F&B — MERCY TECH</title>
+  <style>
+    :root{--text:#1d1d1f;--muted:#86868b;--bg:#fff;--card:#f5f5f7;--border:#d2d2d7;--accent:#0071e3;--red:#e8384f;--green:#34c759;--font:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased}
+    .container{max-width:880px;margin:0 auto;padding:0 24px}
+
+    .hero{text-align:center;padding:48px 20px 20px}
+    .hero .badge{display:inline-block;background:#000;color:#fff;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:6px 16px;border-radius:99px;margin-bottom:16px}
+    .hero h1{font-size:38px;font-weight:700;letter-spacing:-0.02em;margin-bottom:8px}
+    .hero .sub{font-size:18px;color:var(--muted);max-width:580px;margin:0 auto}
+
+    .pain{background:#1d1d1f;color:#fff;border-radius:20px;padding:36px 28px;margin:32px 0}
+    .pain h2{font-size:22px;margin-bottom:16px;color:#ff6b6b}
+    .pain-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .pain-item{background:rgba(255,255,255,0.06);border-radius:12px;padding:16px;font-size:13px}
+    .pain-item .num{font-size:28px;font-weight:700;color:#ff6b6b;margin-bottom:4px}
+    .pain-item .label{color:#a1a1a6}
+
+    section{margin-bottom:40px}
+    section h2{font-size:24px;font-weight:700;margin-bottom:14px;padding-bottom:6px;border-bottom:2px solid var(--text)}
+    p,.desc{font-size:14px;color:#555;margin-bottom:10px}
+
+    .solution{display:grid;grid-template-columns:60px 1fr;gap:14px;align-items:start;margin:12px 0;padding:16px;background:var(--card);border-radius:14px}
+    .solution .step{width:44px;height:44px;background:#000;color:#fff;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700}
+    .solution h3{font-size:15px;font-weight:600;margin-bottom:2px}
+    .solution p{font-size:13px;color:var(--muted);margin:0}
+
+    .compare{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0}
+    .compare-card{border:1px solid var(--border);border-radius:14px;padding:18px}
+    .compare-card h4{font-size:14px;margin-bottom:8px}
+    .compare-card.old{background:#fef2f2}
+    .compare-card.new{background:#f0fdf4}
+    ul{margin:6px 0 10px 16px;font-size:13px}
+    li{margin-bottom:4px}
+
+    table{width:100%;border-collapse:collapse;margin:12px 0 16px;font-size:13px}
+    th{text-align:left;padding:10px 12px;font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;border-bottom:2px solid var(--border)}
+    td{padding:10px 12px;border-bottom:1px solid #eee;vertical-align:top}
+    td:first-child{font-weight:500}
+    .r{text-align:right;font-variant-numeric:tabular-nums}
+    .total td{font-weight:700;border-top:2px solid var(--text);border-bottom:none;font-size:14px}
+    .highlight{background:#f0fdf4;border:1px solid #86efac;border-radius:12px;padding:18px;font-size:13px;margin:14px 0}
+
+    .roi{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:14px 0}
+    .roi-card{background:var(--card);border-radius:12px;padding:16px;text-align:center}
+    .roi-num{font-size:24px;font-weight:700;margin-bottom:2px}
+    .roi-label{font-size:11px;color:var(--muted)}
+    .roi-green .roi-num{color:#2e7d32}
+    .roi-red .roi-num{color:var(--red)}
+
+    .cta{background:linear-gradient(135deg,#0071e3,#5856d6);border-radius:20px;padding:32px;text-align:center;color:#fff;margin:28px 0}
+    .cta h2{font-size:22px;margin-bottom:8px}
+    .cta p{font-size:14px;opacity:.85;margin-bottom:16px}
+    .cta .btn{display:inline-block;background:#fff;color:#0071e3;font-weight:600;padding:12px 28px;border-radius:99px;text-decoration:none;font-size:14px}
+
+    .sub-note{font-size:12px;color:var(--muted);font-style:italic}
+    footer{text-align:center;padding:24px 0;border-top:1px solid var(--border);margin-top:28px;font-size:12px;color:var(--muted)}
+
+    @media print{
+      body{font-size:12px}
+      section,.pain,.cta,.compare,.roi{page-break-inside:avoid}
+      h2{page-break-after:avoid}
+      .hero{padding:28px 20px 16px}
+    }
+    @media(max-width:700px){.hero h1{font-size:28px}.pain-grid,.compare,.roi{grid-template-columns:1fr 1fr}.solution{grid-template-columns:44px 1fr}}
+  </style>
+</head>
+<body>
+<div class="container">
+
+<div class="hero"><img src="logo.png" alt="Bot Nh?p Li?u" style="height:64px;margin-bottom:12px">
+  <span class="badge">Dành cho ngành F&B</span>
+  <h1>Bot Nhập Liệu.</h1>
+  <p class="sub">Chụp ảnh chứng từ → AI đọc → tự động nhập hệ thống.<br>Không còn ghi tay. Không còn thất thoát.</p>
+</div>
+
+<!-- NỖI ĐAU -->
+<div class="pain">
+  <h2>Anh/chị có đang gặp những vấn đề này?</h2>
+  <div class="pain-grid">
+    <div class="pain-item">
+      <div class="num">3–5%</div>
+      <div class="label">Doanh thu F&B bị thất thoát NVL mỗi tháng mà không biết nguyên nhân</div>
+    </div>
+    <div class="pain-item">
+      <div class="num">4–5h</div>
+      <div class="label">Mỗi ngày nhân viên kho mất cho việc ghi chép, nhập liệu thủ công</div>
+    </div>
+    <div class="pain-item">
+      <div class="num">Cuối tháng</div>
+      <div class="label">Mới phát hiện chênh lệch kho — lúc đó đã quá muộn để tìm nguyên nhân</div>
+    </div>
+    <div class="pain-item">
+      <div class="num">Sổ ghi tay</div>
+      <div class="label">Hóa đơn giấy, sổ BTP, phiếu giao — dễ mất, dễ sai, không đối soát được</div>
+    </div>
+  </div>
+</div>
+
+<!-- GIẢI PHÁP -->
+<section>
+  <h2>Giải pháp: 3 bước đơn giản</h2>
+
+  <div class="solution">
+    <div class="step">1</div>
+    <div>
+      <h3>Chụp ảnh chứng từ</h3>
+      <p>Nhân viên chụp ảnh hóa đơn, phiếu giao, sổ BTP — bằng điện thoại, gửi qua Telegram</p>
+    </div>
+  </div>
+
+  <div class="solution">
+    <div class="step">2</div>
+    <div>
+      <h3>AI đọc & ghi nhận</h3>
+      <p>Bot tự động nhận diện: tên NCC, mặt hàng, số lượng, đơn giá, ngày, chữ ký người nhận</p>
+    </div>
+  </div>
+
+  <div class="solution">
+    <div class="step">3</div>
+    <div>
+      <h3>Xuất lên hệ thống</h3>
+      <p>Dữ liệu tự động ghi vào Google Sheets / Excel — có dashboard tổng nhập, xuất, tồn kho</p>
+    </div>
+  </div>
+</section>
+
+<!-- TRƯỚC & SAU -->
+<section>
+  <h2>Trước & Sau khi dùng Bot Nhập Liệu</h2>
+  <div class="compare">
+    <div class="compare-card old">
+      <h4>Trước</h4>
+      <ul>
+        <li>Sổ BTP ghi tay — sai, mất, khó soát</li>
+        <li>HĐ nhập hàng giấy — chất đống cuối tháng</li>
+        <li>Phiếu giao chi nhánh — không format chuẩn</li>
+        <li>Nhập liệu: 4–5 giờ mỗi ngày</li>
+        <li>Thất thoát: 3–5% doanh thu</li>
+        <li>Đối soát: cuối tháng, thủ công, sai sót</li>
+      </ul>
+    </div>
+    <div class="compare-card new">
+      <h4>Sau</h4>
+      <ul>
+        <li>Chụp ảnh → AI ghi nhận tự động</li>
+        <li>HĐ số hóa ngay khi nhận</li>
+        <li>Phiếu giao đọc tự động, kiểm chữ ký</li>
+        <li>Nhập liệu: 15 phút mỗi ngày</li>
+        <li>Thất thoát: giảm còn &lt;1%</li>
+        <li>Đối soát: tự động, hàng ngày, chính xác</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ROI -->
+<section>
+  <h2>Hiệu quả đầu tư</h2>
+  <div class="roi">
+    <div class="roi-card roi-green">
+      <div class="roi-num">70%</div>
+      <div class="roi-label">Giảm thời gian nhập liệu</div>
+    </div>
+    <div class="roi-card roi-green">
+      <div class="roi-num">&lt;1%</div>
+      <div class="roi-label">Tỷ lệ thất thoát sau khi dùng</div>
+    </div>
+    <div class="roi-card roi-red">
+      <div class="roi-num">1–2 tháng</div>
+      <div class="roi-label">Thời gian hoàn vốn</div>
+    </div>
+    <div class="roi-card roi-green">
+      <div class="roi-num">~95%</div>
+      <div class="roi-label">Độ chính xác đối soát</div>
+    </div>
+  </div>
+  <div class="highlight">
+    <strong>Ví dụ:</strong> Chuỗi nhà hàng doanh thu 500 triệu/tháng → giảm 2% thất thoát NVL = tiết kiệm 10 triệu/tháng. Hoàn vốn chỉ trong 1 tháng.
+  </div>
+</section>
+
+<!-- BẢNG GIÁ -->
+<section>
+  <h2>Bảng Giá</h2>
+  <table>
+    <thead><tr><th>Gói</th><th>Bao gồm</th><th class="r">Setup (1 lần)</th><th class="r">Vận hành/tháng</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>Cơ Bản</strong></td>
+        <td>1 loại chứng từ (VD: hóa đơn nhập hàng)</td>
+        <td class="r">5.000.000đ</td>
+        <td class="r">500.000đ</td>
+      </tr>
+      <tr>
+        <td><strong>Tiêu Chuẩn</strong></td>
+        <td>3 loại (HĐ nhập + phiếu giao + sổ BTP)</td>
+        <td class="r">9.000.000đ</td>
+        <td class="r">500.000đ</td>
+      </tr>
+      <tr>
+        <td><strong>Toàn Diện</strong></td>
+        <td>5 loại trở lên (tùy chỉnh theo nhu cầu)</td>
+        <td class="r">Từ 13.000.000đ</td>
+        <td class="r">1.000.000đ</td>
+      </tr>
+      <tr>
+        <td><strong>Chuỗi</strong></td>
+        <td>Nhiều chi nhánh + dashboard tổng</td>
+        <td class="r">Liên hệ</td>
+        <td class="r">Liên hệ</td>
+      </tr>
+    </tbody>
+  </table><p class="sub-note" style="margin-top:6px">* Chi phí AI (ChatGPT): khách tự trả theo tần suất sử dụng, mua giá gốc qua MERCY TECH.</p>
+  <p class="sub-note">Bao gồm: phân tích luồng + build bot + kiểm thử + đào tạo sử dụng + hỗ trợ 2 tuần đầu. Triển khai trong 3–5 ngày.</p>
+</section>
+
+<!-- CASE STUDY -->
+<section>
+  <h2>Khách hàng đã triển khai</h2>
+  <div class="highlight">
+    <strong>Haru Sushi — Chuỗi 5 chi nhánh + Bếp Trung Tâm</strong><br>
+    Số hóa toàn bộ 4 loại chứng từ: chứng từ NCC, sổ BTP, phiếu điều chuyển, phiếu 45 mã NVL. Tự động kiểm tra chữ ký người nhận hàng. Giảm 70% thời gian nhập liệu, kiểm soát thất thoát realtime.
+  </div>
+</section>
+
+<!-- CTA -->
+<div style="background:#fffbeb;border:1px solid #fbbf24;border-radius:12px;padding:16px;margin:14px 0;font-size:13px"><strong>Nâng cấp tiếp theo:</strong> Ngoài bot nhập liệu, MERCY TECH còn triển khai hệ thống <strong>Xuất Nhập Tồn tự động</strong> — theo dõi tồn kho realtime, đối soát NCC, cảnh báo hao hụt. Liên hệ để được tư vấn thêm.</div><div class="cta">
+  <h2>Sẵn sàng tiết kiệm hàng triệu mỗi tháng?</h2>
+  <p>Liên hệ ngay để được tư vấn miễn phí và xem demo trực tiếp.</p>
+  <a href="tel:0763068614" class="btn">Gọi ngay: 0763 068 614</a>
+</div>
+
+</div>
+
+<footer>
+  <p>MERCY TECH — Bot Nhập Liệu | Hotline: 0763 068 614 | Email: Mercytechglobal@gmail.com</p>
+  <p style="margin-top:4px">© 2026 MERCY TECH. Tài liệu dành cho đối tác.</p>
+</footer>
+
+</body>
+</html>
+
